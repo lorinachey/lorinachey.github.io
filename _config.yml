@@ -12,7 +12,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Lorin Achey"
 description:	       "A personal portfolio webpage"
-author:              "Lorin Achey, Design by: Paul Le"
+# author:              "Lorin Achey, Design by: Paul Le"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:

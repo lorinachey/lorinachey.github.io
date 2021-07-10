@@ -8,8 +8,8 @@ google-ID: ''
 
 menu:
 - {name: 'About',              url: 'about'}
-- {name: 'Professional Experience',  url: 'work'}
-- {name: 'Undergraduate Research', url: 'ug-research'}
+- {name: 'Resume',  url: 'resume'}
+- {name: 'Research', url: 'research'}
 # - {name: 'Sample Posts',       url: 'sample-posts'}
 # - {name: 'Documentation',      url: 'documentation'}
 - {name: 'Contact',            url: 'contact'}
