@@ -45,9 +45,11 @@ January 2018 – June 2020
 * Led a 3-person team in developing a LiDAR imaging system that will be housed in a satellite and deployed from the International Space Station to demonstrate the feasibility of small form factor imaging systems for space applications
 * Created the software control flow diagram and documentation for handling errors in real-time
 * Developed flight software for a PSoC device which will control the system and interact with the on-board computer
+
 ### Avionics Flight Software Team, Yellow Jacket Space Program, Georgia Tech, Atlanta, GA.                           
 March 2019 – January 2020
 * Developed and tested firmware in C++ to control IMU sensors on custom printed circuit boards
+
 ### Martian Advanced Renewable Systems Team, V.I.P. Research Program for Undergraduates, Georgia Tech, Atlanta, GA.                           
 August 2016 – August 2018
 * Coordinated team communication, advised sub-teams on goal setting, and facilitated team brainstorming sessions 
@@ -57,7 +59,7 @@ August 2016 – August 2018
 ---
 
 ## Professional Skills & Applications
-**Applications:** SolidWorks, Fusion360, Altium Designer, ADS, MATLAB, PSoC Creator
-**Professional:** Technical Communication, Engineering Documentation, Organization and Project Planning, Software Architecture and Design
-**Software:** C, C++, JavaScript, HTML, CSS, Python, Git, Docker, Jenkins, Atlassian Suite
+**Applications:** SolidWorks, Fusion360, Altium Designer, ADS, MATLAB, PSoC Creator \
+**Professional:** Technical Communication, Engineering Documentation, Organization and Project Planning, Software Architecture and Design \
+**Software:** C, C++, JavaScript, HTML, CSS, Python, Git, Docker, Jenkins, Atlassian Suite \
 
