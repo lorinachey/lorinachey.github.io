@@ -29,9 +29,11 @@ May 2020 | GPA 3.67 / 4.0 | Highest Honors
 June 2020 – Present
 * Developing innovative solutions for government partners utilizing Qualcomm’s proprietary technologies and wireless communication products
 * Helping new engineers transition from university to industry by providing formal career mentorship and guidance
+
 ### Software/Firmware Engineer Intern, Garmin International, Yarmouth, ME.                           
 May 2019 – August 2019
 * Designing software features and making critical bug fixes for Garmin’s Iridium satellite enabled hand-held communicators
+
 ### Software Engineering Research Intern, Georgia Tech Research Institute, Atlanta, GA.
 August 2017 – February 2020 (3 full-time semesters, 3 part-time semesters)
 * Assisted in developing a novel algorithm for hydration by seeking out the most recent and reputable publications on physiological conditions associated with hydration and using that data to construct an algorithm for real-time hydration
