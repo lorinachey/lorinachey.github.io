@@ -61,5 +61,5 @@ August 2016 – August 2018
 ## Professional Skills & Applications
 **Applications:** SolidWorks, Fusion360, Altium Designer, ADS, MATLAB, PSoC Creator \
 **Professional:** Technical Communication, Engineering Documentation, Organization and Project Planning, Software Architecture and Design \
-**Software:** C, C++, JavaScript, HTML, CSS, Python, Git, Docker, Jenkins, Atlassian Suite \
+**Software:** C, C++, JavaScript, HTML, CSS, Python, Git, Docker, Jenkins, Atlassian Suite
 
