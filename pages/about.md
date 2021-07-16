@@ -18,10 +18,9 @@ I am currently a Master's student and a software engineer with [Qualcomm](https:
 #### Graduate Level Coursework (Grade Received)
 * PCB Design for Signal Integrity (In Progress)
 * Practical PCB Design & Manufacture (A)
-* Introduction to Information Security (A)
-    * Taken during undegraduate program at Georgia Tech
-* Introduction to Enterprise Computing (A)
-    * Taken during undergraduate program at Georgia Tech
+* Taken during undegraduate program at Georgia Tech:
+    * Introduction to Information Security (A)
+    * Introduction to Enterprise Computing (A)
 
 ---
 
