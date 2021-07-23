@@ -10,17 +10,23 @@ I am currently a Master's student and a software engineer with [Qualcomm](https:
 ## Primary Research Interests
 * Applied electromagnetics
 * Quantum science and engineering
-* Software architecture and design for optimal hardware performance
-* Circuit design for signal integrity, spectral and power efficiency
+
+---
+
+#### Relevant Undergraduate Coursework (Grade Received)
+* Radiation Physics (A)
+* Introduction to Modern Physics (B)
+* Principles & Applications of Engineering Materials (A)
+* Materials Characterization Lab (A)
+* Calculus I-III, Linear Algebra, Differential Equations
 
 ---
 
 #### Graduate Level Coursework (Grade Received)
 * PCB Design for Signal Integrity (In Progress)
 * Practical PCB Design & Manufacture (A)
-* Taken during undegraduate program at Georgia Tech:
-    * Introduction to Information Security (A)
-    * Introduction to Enterprise Computing (A)
+* Introduction to Information Security (A) (Georgia Tech)
+* Introduction to Enterprise Computing (A) (Georgia Tech)
 
 ---
 
