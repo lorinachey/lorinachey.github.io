@@ -8,34 +8,18 @@ image: rmnp-hike-portrait.jpg
 I am currently a Master's student and a software engineer with [Qualcomm](https://www.qualcomm.com/). I am studying electromagnetics and radio frequency engineering at the [University of Colorado - Boulder](https://www.colorado.edu/emag-research/) in the Electromagnetics, RF, and Microwave Research group.
 
 ## Primary Research Interests
-* Applied electromagnetics
-* Quantum science and engineering
+* Applied Electromagnetics
+* Quantum Science and Engineering
 
 ---
 
-#### Relevant Undergraduate Coursework (Grade Received)
-* Radiation Physics (A)
-* Introduction to Modern Physics (B)
-* Principles & Applications of Engineering Materials (A)
-* Materials Characterization Lab (A)
-* Calculus I-III, Linear Algebra, Differential Equations
+#### Skills & Strengths
+In addition to increasing my technical knowledge through academic coursework, I am focused on developing the following skills to help me become successful in my future PhD program.
+* Technical writing and communication skills
+* Working independently to research solutions and come up with expirements to test my theories
+* Balancing the need to work independently with knowing when and how to seek additional guidance and constructive feedback
 
----
+#### Peer Reviews
+*Coming Soon*
 
-#### Graduate Level Coursework (Grade Received)
-* PCB Design for Signal Integrity (In Progress)
-* Practical PCB Design & Manufacture (A)
-* Introduction to Information Security (A) (Georgia Tech)
-* Introduction to Enterprise Computing (A) (Georgia Tech)
-
----
-
-#### Future Graduate Level Course Plan
-* Passive Microwave Circuit Design
-* Active Microwave Circuit Design
-* RF/Microwave Lab
-* Electromagnetic Radiation & Antennas
-* Power Amplifiers
-* Foundations of Quantum Hardware
-* Quantum Engineering Lab
 
