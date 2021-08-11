@@ -20,3 +20,10 @@ image: pcbs-ecen.jpg
 * Modeling discontinuities: capacitive, inductive, transmission lines, stubs, vias, etc.
 * Design for high speed serial links
 
+
+#### Check out the images below for a sample of some of the signal integrity characterization work I performed during the summer of 2021.
+
+---
+
+
+
