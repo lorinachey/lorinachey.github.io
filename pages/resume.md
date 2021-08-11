@@ -12,7 +12,7 @@ permalink: /resume
 ### University of Colorado - Boulder, Candidate for M.S. in Electrical Engineering
 Expected Graduation 2023 | GPA 4.0 / 4.0
 * Specializing in Electromagnetics, Microwave, and Radio Frequency Engineering
-* See the [About](https://lorinachey.github.io/about) page for a list of courses taken and a plan for future coursework.
+* See the [Coursework](https://lorinachey.github.io/coursework) page for a list of courses taken and a plan for future coursework.
 
 ### Georgia Institute of Technology, B.S. in Computer Science
 May 2020 | GPA 3.67 / 4.0 | Highest Honors
