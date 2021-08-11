@@ -5,14 +5,23 @@ permalink: /coursework
 image: stack_of_books.jpg
 ---
 
-### Relevant Undergraduate Coursework
+### Undergraduate Coursework
+* Analysis of Algorithms
+* Machine Learning
+* Computing Systems
+* Computer Simulation
+* Computer Networking
+* Data Structures and Algorithms
 * Radiation Physics
 * Introduction to Modern Physics
+* Introduction to Nuclear Engineering
 * Principles & Applications of Engineering Materials
 * Materials Characterization Lab
 * Numerical Methods
 * Statistics and Applications
-* Calculus I-III, Linear Algebra, Differential Equations
+* Thermodynamics
+* Fluid Mechanics & Compressible Flow
+* Circuit Analysis & Circuits & Electronics Lab
 
 ---
 
