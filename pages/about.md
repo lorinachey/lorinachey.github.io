@@ -21,6 +21,3 @@ In addition to increasing my technical knowledge through academic coursework, I 
 * Technical writing and communication skills
 * Working independently to research solutions and come up with experiments to test my theories
 * Balancing the need to work independently with knowing when and how to seek additional guidance and constructive feedback
-
-
-
