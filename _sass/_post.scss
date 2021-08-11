@@ -15,10 +15,11 @@
   display: block;
   max-width: 600px;
 }
-.image-caption p {
+.featured-image .image-caption p {
   display: block;
   font-size: small;
   font-weight: bold;
+  padding-top: 0px;
 }
 @media (max-width: $container-width) {
   .post-content {
