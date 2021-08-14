@@ -15,12 +15,6 @@
   display: block;
   max-width: 600px;
 }
-p.image-caption {
-  display: block;
-  font-size: small;
-  font-weight: bold;
-  padding-top: 0px;
-}
 @media (max-width: $container-width) {
   .post-content {
     width: 60vw;
