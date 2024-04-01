@@ -2,7 +2,27 @@
 layout: coursework
 title: Relevant Academic Coursework
 permalink: /coursework
-image: stack_of_books.jpg
+image: IRL-me.jpeg
+---
+
+### Completed Graduate Coursework
+* Advanced Robotics
+* Science of Autonomous Systems
+* Electromagnetic Radiation & Antennas
+* Quantum Mechanics
+* PCB Design for Signal Integrity
+* Practical PCB Design & Manufacture 
+* Introduction to Information Security (Georgia Tech)
+* Introduction to Enterprise Computing (Georgia Tech)
+
+---
+
+### Future Graduate Level Course Plan
+* Deep Learning & Neural Networks
+* Probability Theory
+* Decision Making Under Uncertainty
+* Foundations of Software Engineering
+
 ---
 
 ### Undergraduate Coursework
@@ -24,21 +44,3 @@ image: stack_of_books.jpg
 * Circuit Analysis & Circuits & Electronics Lab
 
 ---
-
-### Completed Graduate Coursework
-* PCB Design for Signal Integrity
-* Practical PCB Design & Manufacture 
-* Introduction to Information Security (Georgia Tech)
-* Introduction to Enterprise Computing (Georgia Tech)
-
----
-
-### Future Graduate Level Course Plan
-* Quantum Mechanics
-* Foundations of Quantum Hardware
-* Quantum Engineering Lab
-* Passive Microwave Circuit Design
-* Active Microwave Circuit Design
-* RF/Microwave Lab
-* Electromagnetic Radiation & Antennas
-* Power Amplifiers
