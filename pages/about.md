@@ -5,11 +5,14 @@ permalink: /about
 image: rmnp-hike-portrait.jpg
 ---
 
-I am currently a Master's student and a software engineer with [Qualcomm](https://www.qualcomm.com/). I am studying electromagnetics and radio frequency engineering at the [University of Colorado - Boulder](https://www.colorado.edu/emag-research/) in the Electromagnetics, RF, and Microwave Research group.
+I am a PhD student at the University of Colorado Boulder studying under Dr. Bradley Hayes from the [Collaborative Artificial Intelligence and Robotics Laboratory](https://www.cairo-lab.com/) and Dr. Christoffer Heckman from the [Autonomous Robotics and Perception Group](https://arpg.github.io/)! I am working to become an expert in the field of autonomous vehicles with an emphasis on robust AI/ML systems that are explainable and safe.
+
+I initially started graduate school as a Master's student in electrical engineering when I thought I wanted to pursue RF engineering. But one course in robotics and I was hooked! From that point on, I changed my curriculum to support my new goal of becomoing a roboticist. I was lucky to meet Dr. Hayes and Dr. Heckman just a few months before the PhD deadline, and I'm thrilled to be co-advised by them!
 
 ### Primary Research Interests
-* Applied Electromagnetics
-* Quantum Science and Engineering
+* Diffusion models and generative AI for autonomous vehicles
+* Behavior prediction of autonomous agents in collaborative settings
+* Explainable AI in Autonomous Systems
 
 ---
 
@@ -17,7 +20,8 @@ I am currently a Master's student and a software engineer with [Qualcomm](https:
 *Coming Soon*
 
 ### Skills & Strengths
-In addition to increasing my technical knowledge through academic coursework, I am focused on developing the following skills to help me become successful in my future PhD program.
-* Technical writing and communication skills
-* Working independently to research solutions and come up with experiments to test my theories
+In addition to increasing my technical knowledge through academic coursework and research, I am focused on continued development in:
+* Technical writing
+* Effective communication and promoting teamwork and collaboration
 * Balancing the need to work independently with knowing when and how to seek additional guidance and constructive feedback
+* Mentoring and giving back
