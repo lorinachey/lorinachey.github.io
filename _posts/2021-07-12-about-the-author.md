@@ -7,8 +7,14 @@ tags: [sample]
 image: lorin-cosmo-aspens.JPG
 ---
 
-I am a software engineer at Qualcomm and a Master's student at the University of Colorado - Boulder. I am currently studying Electrical Engineering with a specialization in RF engineering, but I am also exploring topics in optics, physics, and quantum engineering.
+Before pursuing a PhD, I chose to spend several years in industry to develop professional skills, gain exposure to large scale software systems, and figure out where I wanted to develop niche expertise! I'm thoroughly enjoying my courses at CU Boulder thus far and I am excited to start a new chapter in the PhD program for Computer Science and Robotics at CU Boulder!
 
-During my undergraduate program at Georgia Tech, I got to work on designing a small form factor LiDAR system that will be housed on a CubeSat and deployed from the International Space Station! You can read more about the project [here](http://www.ssdl.gatech.edu/research/projects/tethering-and-ranging-mission-georgia-institute-technology-targit). This project sparked my interest in optics and introduced me to applied research. I've been hooked ever since!
+During my undergraduate program at Georgia Tech, I got to work on designing a small form factor LiDAR system that will be housed on a CubeSat and deployed from the International Space Station! You can read more about the project [here](http://www.ssdl.gatech.edu/research/projects/tethering-and-ranging-mission-georgia-institute-technology-targit). This project sparked my interest in applied research and trying to do things that haven't been done before!
 
-I chose to take a job in industry after graduation, and before applying to PhD programs, to gain exposure to more topics and help me narrow my focus for PhD studies. I'm thoroughly enjoying my courses at CU Boulder thus far and I am excited to start planning for my PhD applications!
+At Georgia Tech, I also got involved with Wreck Racing, a collegiate engineering racing team whose primary competition is building a race car on a $2000 budget. There were many junk yard runs, machining sessions, and late nights in the shop! I had always had an interest in automotive applications, but never got to "wrench" on cars as a kid. I was thrilled when I got to GT and realized I could join a racing team, learn to drive a manual transmission, and drive on a closed course race circuit!
+
+Combining my automotive hobby and software skills seemed like a natural progression! But it wasn't until I lost a friend in a vehicle-bicycle collision that I understood exactly what I wanted to do with that combination of interests.
+
+My friend was cycling to work when she was struck by a truck and killed. Since her death, I have also had a neighbor killed by a vehicle while cycling. For a while, my commute to work took me by a memorial to a 17 year old cycilst from my town who was tragically killed when he was struck by a vehicle that wandered off the highway into the shoulder. I believe that these tragic deaths are preventable with autonomous vehicle technology. In a world with increased interest in walking and cycling rather than driving, I want to be at the forefront of developing and testing systems that save lives!
+
+
