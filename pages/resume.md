@@ -9,13 +9,14 @@ permalink: /resume
 
 ## Education
 
-### University of Colorado - Boulder, Candidate for M.S. in Electrical Engineering
-Expected Graduation 2023 | GPA 4.0 / 4.0
-* Specializing in Electromagnetics, Microwave, and Radio Frequency Engineering
+### University of Colorado - Boulder, PhD Student in Computer Science & Robotics
+Expected Graduation 2028
+* Specializing in AI/ML for Autonomous Vehicles!
 * See the [Coursework](https://lorinachey.github.io/coursework) page for a list of courses taken and a plan for future coursework.
+* See the [Research](https://lorinachey.github.io/research) page for current research and previously papers.
 
 ### Georgia Institute of Technology, B.S. in Computer Science
-May 2020 | GPA 3.67 / 4.0 | Highest Honors
+May 2020 | Highest Honors
 * 1st Place Research Poster: Symposium on Space Innovations, Small form-factor satellite sized LiDAR imaging system - 2018
 * Diversity and Inclusion Fellow: Recognized for spearheading inclusion initiatives in the Student Competition Center which houses Georgia Tech's competitive engineering teams - 2019
 * Dean’s List & Georgia Tech Grant: Merit based scholarship for high-achieving students needing financial assistance
@@ -25,14 +26,25 @@ May 2020 | GPA 3.67 / 4.0 | Highest Honors
 ---
 
 ## Work Experience
+### Software Engineer II, AWS Ground Station - Amazon, Denver, CO.
+July 2022 - September 2023
+* Re-architected the code for computing antenna pointing directions to regionalize the data and prevent performing redundant computations
+* Improved customer experience by enhancing validation for improperly configured mission profiles before failing a contact
+* Created a new developer test environment that closely models production to cut down on bugs that cause pipeline rollbacks
+
 ### Software Engineer, Qualcomm, Boulder, CO.                           
-June 2020 – Present
+June 2020 – July 2022
 * Developing innovative solutions for government partners utilizing Qualcomm’s proprietary technologies and wireless communication products
+* Owning the design and implementation of a critical feature including requirements generation, software architecture, development of a testing framework, UI generation and backend support software
+* Improved test coverage by 20% on a server by creating a sophisticated unit test suite using Python and Pytest
 * Helping new engineers transition from university to industry by providing formal career mentorship and guidance
 
 ### Software/Firmware Engineer Intern, Garmin International, Yarmouth, ME.                           
 May 2019 – August 2019
 * Designing software features and making critical bug fixes for Garmin’s Iridium satellite enabled hand-held communicators
+* Quickly ramped up on a complex C/C++ codebase contributing fixes and features within one week of starting the internship
+* Implemented the feature for sending messages from a remote device to a hand-held Garmin GPS device using ANT/BLE protocols
+* Low-level debugging to track down software and firmware issues including memory leaks and boundary overruns
 
 ### Software Engineering Research Intern, Georgia Tech Research Institute, Atlanta, GA.
 August 2017 – February 2020 (3 full-time semesters, 3 part-time semesters)
@@ -61,7 +73,6 @@ August 2016 – August 2018
 ---
 
 ## Professional Skills & Applications
-**Applications:** SolidWorks, Fusion360, Altium Designer, ADS, MATLAB, PSoC Creator \
-**Professional:** Technical Communication, Engineering Documentation, Organization and Project Planning, Software Architecture and Design \
-**Software:** C, C++, JavaScript, HTML, CSS, Python, Git, Docker, Jenkins, Atlassian Suite
+**Software:** Python, C++, ROS, OpenCV, PyTorch, TensorFlow, CARLA, MATLAB, Amazon Web Services
+**Professional:** Software Architecture and Design, Technical Communication  and Teambuilding, Engineering Documentation, Organization and Project Planning \
 
