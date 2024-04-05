@@ -17,7 +17,7 @@ I started graduate school as a Master's student, initially focused on RF enginee
 ---
 
 ### Media
-* [Diveristy and Inclusion Fellowship Honorable Mention](https://www.cc.gatech.edu/news/shana-white-named-georgia-tech-diversity-and-inclusion-fellow-class-2019)
+* [Diversity and Inclusion Fellowship - Honorable Mention by Georgia Tech's College of Computing](https://www.cc.gatech.edu/news/shana-white-named-georgia-tech-diversity-and-inclusion-fellow-class-2019)
 * ["Space Innovators Gather @ Georgia Tech to Contemplate the Future"](https://ae.gatech.edu/news/2018/11/space-innovators-gather-georgia-tech-contemplate-future)
 
 ---

@@ -74,6 +74,6 @@ August 2016 – August 2018
 
 ## Professional Skills & Applications
 **Software:** Python, C++, ROS, OpenCV, PyTorch, TensorFlow, CARLA, MATLAB, Amazon Web Services \
-**Professional:** Software Architecture and Design, Technical Communication  and Teambuilding, Engineering Documentation, Organization and Project Planning \
+**Professional:** Software Architecture and Design, Technical Communication  and Teambuilding, Engineering Documentation, Organization and Project Planning
 
 ---
