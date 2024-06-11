@@ -12,18 +12,13 @@ I started graduate school as a Master's student, initially focused on RF enginee
 ### Primary Research Interests
 * Diffusion models and generative AI for autonomous vehicles
 * Behavior prediction of autonomous agents in collaborative settings
-* Explainable AI in Autonomous Systems
+* Explainable AI in autonomous systems
 
 ---
 
 ### Media
 * [Diversity and Inclusion Fellowship - Honorable Mention by Georgia Tech's College of Computing](https://www.cc.gatech.edu/news/shana-white-named-georgia-tech-diversity-and-inclusion-fellow-class-2019)
 * ["Space Innovators Gather @ Georgia Tech to Contemplate the Future"](https://ae.gatech.edu/news/2018/11/space-innovators-gather-georgia-tech-contemplate-future)
-
----
-
-### Peer Reviews
-*Coming Soon*
 
 ---
 
