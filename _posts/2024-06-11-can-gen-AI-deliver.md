@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Can Generative AI deliver?"
+title: "Can Generative AI deliver for Robotics?"
 author: "Lorin Achey"
 categories: facts
 tags: [gen-ai]
