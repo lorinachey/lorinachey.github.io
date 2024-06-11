@@ -8,20 +8,13 @@ image: IRL-me.jpeg
 ### Completed Graduate Coursework
 * Advanced Robotics
 * Science of Autonomous Systems
+* Decision Making Under Uncertainty
 * Electromagnetic Radiation & Antennas
 * Quantum Mechanics
 * PCB Design for Signal Integrity
-* Practical PCB Design & Manufacture 
+* Practical PCB Design & Manufacture
 * Introduction to Information Security (Georgia Tech)
 * Introduction to Enterprise Computing (Georgia Tech)
-
----
-
-### Future Graduate Level Course Plan
-* Deep Learning & Neural Networks
-* Probability Theory
-* Decision Making Under Uncertainty
-* Foundations of Software Engineering
 
 ---
 
