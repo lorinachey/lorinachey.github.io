@@ -25,6 +25,12 @@ May 2020 | Highest Honors
 
 ---
 
+## Professional Skills & Applications
+**Software:** Python, C++, ROS/ROS2, PyTorch, TensorFlow, IsaacSim, CARLA, Git, Docker, Linux, Amazon Web Services \
+**Professional:** Software Architecture and Design, Technical Communication  and Teambuilding, Engineering Documentation, Organization and Project Planning
+
+---
+
 ## Work Experience
 ### Software Engineer II, AWS Ground Station - Amazon, Denver, CO.
 July 2022 - September 2023
@@ -69,11 +75,5 @@ August 2016 – August 2018
 * Coordinated team communication, advised sub-teams on goal setting, and facilitated team brainstorming sessions 
 * Researched Martian soil composition, environmental conditions, and chemical admixtures to develop a novel concrete from simulated Martian soil
 * Performed laboratory experiments including compression tests on various formulas and explored model-based systems engineering with SysML and MagicDraw
-
----
-
-## Professional Skills & Applications
-**Software:** Python, C++, ROS/ROS2, PyTorch, TensorFlow, IsaacSim, CARLA, Git, Docker, Linux, Amazon Web Services \
-**Professional:** Software Architecture and Design, Technical Communication  and Teambuilding, Engineering Documentation, Organization and Project Planning
 
 ---
