@@ -9,6 +9,8 @@ image: IRL-me.jpeg
 * Advanced Robotics
 * Science of Autonomous Systems
 * Decision Making Under Uncertainty
+* Graduate Design and Analysis of Algorithms
+* Theoretical Foundations for Autonomous Systems
 * Electromagnetic Radiation & Antennas
 * Quantum Mechanics
 * PCB Design for Signal Integrity
