@@ -9,11 +9,11 @@ permalink: /resume
 
 ## Education
 
-### University of Colorado - Boulder, PhD Student in Computer Science & Robotics
+### University of Colorado - Boulder, Ph.D. Student in Computer Science & Robotics
 Expected Graduation 2028
-* Specializing in AI/ML for Autonomous Vehicles!
+* Specializing in AI/ML for Autonomous Vehicles and Mobile Robots
+* See the [Research](https://lorinachey.github.io/research) page for current research papers.
 * See the [Coursework](https://lorinachey.github.io/coursework) page for a list of courses taken and a plan for future coursework.
-* See the [Research](https://lorinachey.github.io/research) page for current research and previously papers.
 
 ### Georgia Institute of Technology, B.S. in Computer Science
 May 2020 | Highest Honors
