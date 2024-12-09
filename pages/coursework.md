@@ -11,6 +11,7 @@ image: IRL-me.jpeg
 * Decision Making Under Uncertainty
 * Graduate Design and Analysis of Algorithms
 * Theoretical Foundations for Autonomous Systems
+* Real-Time Embedded Systems
 * Electromagnetic Radiation & Antennas
 * Quantum Mechanics
 * PCB Design for Signal Integrity
