@@ -10,7 +10,7 @@ menu:
 - {name: 'About', url: 'about'}
 - {name: 'Resume', url: 'resume'}
 - {name: 'Research', url: 'research'}
-- {name: 'Coursework', url: 'coursework'}
+# - {name: 'Coursework', url: 'coursework'}
 # - {name: 'Sample Posts',       url: 'sample-posts'}
 # - {name: 'Documentation',      url: 'documentation'}
 - {name: 'Contact',            url: 'contact'}
