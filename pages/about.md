@@ -5,12 +5,13 @@ permalink: /about
 image: rmnp-hike-portrait.jpg
 ---
 
-I am a PhD student at the University of Colorado Boulder studying under Dr. Bradley Hayes from the [Collaborative Artificial Intelligence and Robotics Laboratory](https://www.cairo-lab.com/) and Dr. Christoffer Heckman from the [Autonomous Robotics and Perception Group](https://arpg.github.io/)! I am building expertise in the field of autonomous vehicles (AVs) with an emphasis on robust AI/ML systems that are explainable and safe.
+I am a PhD student and 2025 NDSEG Fellowship recipient, studying at the University of Colorado Boulder under Dr. Bradley Hayes from the [Collaborative Artificial Intelligence and Robotics Laboratory](https://www.cairo-lab.com/) and Dr. Christoffer Heckman from the [Autonomous Robotics and Perception Group](https://arpg.github.io/)! I work on enahancing perception systems for autonomous vehicles (AVs) with an emphasis on robust AI/ML systems that are explainable and safe.
 
 I started graduate school as a Master's student, initially focused on RF engineering and signal integrity. Just one course in robotics and I was hooked! From that point on, I changed my curriculum to support my new goal of becoming a roboticist. I was lucky to meet Dr. Hayes and Dr. Heckman just a few months before the PhD deadline, and I'm thrilled to be co-advised by them!
 
 ### Primary Research Interests
 * Sensor fusion with diffusion models (and other generative methods) for AVs
+* Path planning and navigation over maps generated with advanced sensor fusion techniques
 * Behavior prediction of autonomous agents in collaborative, multi-agent systems
 
 ---
@@ -24,4 +25,4 @@ I started graduate school as a Master's student, initially focused on RF enginee
 ### Skills & Strengths
 * Effective written and oral communication for multi-disciplinary teams
 * Balancing the need to work independently with knowing when and how to seek additional guidance and constructive feedback
-* Mentoring and giving back
+* Mentorship and creating an inclusive and collaborative team environment
