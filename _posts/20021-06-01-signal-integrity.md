@@ -1,3 +1,5 @@
+<!-- HID THIS PAGE BY CHANGING THE DATE -->
+
 ---
 layout: signal_integrity_post
 title: "Signal Integrity Exploration"
