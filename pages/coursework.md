@@ -6,6 +6,7 @@ image: IRL-me.jpeg
 ---
 
 ### Completed Graduate Coursework
+* Sequential Decision Making
 * Advanced Robotics
 * Science of Autonomous Systems
 * Decision Making Under Uncertainty
