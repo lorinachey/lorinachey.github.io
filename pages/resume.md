@@ -9,8 +9,9 @@ permalink: /resume
 
 ## Education
 
-### University of Colorado - Boulder, Ph.D. Student in Computer Science & Robotics
-Expected Graduation 2028
+### University of Colorado - Boulder
+**Ph.D. in Computer Science & Robotics** | Expected 2028 \
+**M.S. in Computer Science** | Expected May 2026
 * Specializing in AI/ML for Autonomous Vehicles and Mobile Robots
 * See the [Research](https://lorinachey.github.io/research) page for current research papers.
 * See the [Coursework](https://lorinachey.github.io/coursework) page for a list of courses taken and a plan for future coursework.
@@ -25,9 +26,13 @@ May 2020 | Highest Honors
 
 ---
 
-## Professional Skills & Applications
-**Software:** Python, C++, ROS/ROS2, PyTorch, TensorFlow, IsaacSim, CARLA, Git, Docker, Linux, Amazon Web Services \
-**Professional:** Software Architecture and Design, Technical Communication  and Teambuilding, Engineering Documentation, Organization and Project Planning
+## Skills
+**Embodied AI & Robotics:** Vision-Language-Action Models (VLA), Reinforcement Learning \
+**Multimodal & Generative AI:** Vision-Language Models (VLM), Diffusion Models, Generative Models \
+**Robotics & Simulation:** IsaacSim, IsaacLab, Mujoco, ROS, ROS2, Motion Planning, SLAM, Mapping, Robotic Control \
+**Machine Learning Frameworks & Tools:** PyTorch, NumPy, Scikit-Learn, Docker, AWS, Git, Linux/Unix Environments \
+**Programming Languages:** Python, C++ \
+**Professional Skills**: Code Review, Mentoring, System Design, Technical Communication, Teambuilding, Collaboration
 
 ---
 
