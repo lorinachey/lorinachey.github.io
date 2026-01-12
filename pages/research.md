@@ -51,4 +51,4 @@ My recent work explores generative 3D world models, specifically diffusion-based
 #### Vision Language Models: PaliGemma from Scratch
 * Recreated the PaliGemma Vision-Language Model (VLM) architecture entirely from scratch using PyTorch.
 * Implemented the complete model structure to deepen understanding of multimodal integration and large-scale model design.
-* [View the GitHub repo here](https://github.com/lorinachey)
+* [View the GitHub repo here](https://github.com/lorinachey/vision-language-models/blob/main/paligemma-from-scratch.ipynb)
