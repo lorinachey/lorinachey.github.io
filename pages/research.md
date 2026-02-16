@@ -12,7 +12,9 @@ My recent work explores generative 3D world models, specifically diffusion-based
 
 ## Publications
 
-
+#### RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration
+* In Review - 2026
+* [Read our pre-print manuscript here.](https://arxiv.org/abs/2602.12074)
 
 #### Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis
 * Accepted at Autonomous Robots (Springer Journal) - January 2026
@@ -33,8 +35,6 @@ My recent work explores generative 3D world models, specifically diffusion-based
 * [Paper Webpage](https://arpg.github.io/scenesense/)
 
 
-#### RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration
-* In Review
 
 ---
 
