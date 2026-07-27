@@ -7,6 +7,13 @@ permalink: /resume
 
 ---
 
+## Awards & Accolades
+
+* **Best Robot Trainer Award**, Telluride Neuromorphic AI Workshop — 2026 ([blog post](https://lorinachey.github.io/telluride-neuromorphic-ai-workshop-2026))
+* **NDSEG Fellowship**, Department of Defense — 2025 ([blog post](https://lorinachey.github.io/im-an-ndseg-fellow) · [CU Boulder spotlight](https://lorinachey.github.io/cu-boulder-spotlight-article))
+
+---
+
 ## Education
 
 ### University of Colorado - Boulder
