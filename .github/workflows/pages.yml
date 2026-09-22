@@ -1,0 +1,53 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [gh-pages, dev]
+  pull_request:
+    branches: [gh-pages]
+  workflow_dispatch:
+
+# Allow one concurrent deployment; don't cancel a run that is mid-deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build --strict_front_matter --trace
+        env:
+          JEKYLL_ENV: production
+
+      - name: Check internal links and images
+        run: bundle exec htmlproofer ./_site --disable-external --allow-hash-href
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  # Only gh-pages deploys. Pushes to dev build and link-check, so the overhaul
+  # is validated against the real production toolchain without going live.
+  deploy:
+    if: github.ref == 'refs/heads/gh-pages'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
