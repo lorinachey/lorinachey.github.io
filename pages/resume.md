@@ -1,6 +1,6 @@
 ---
 layout: cv
-title: Resume
+title: CV
 category: resume
 permalink: /resume
 ---
@@ -16,7 +16,7 @@ permalink: /resume
 
 ### University of Colorado - Boulder
 **Ph.D. in Computer Science & Robotics** | Expected 2028 \
-**M.S. in Computer Science** | Expected May 2026
+**M.S. in Computer Science** | May 2026
 * Specializing in AI/ML for Autonomous Vehicles and Mobile Robots
 * See the [Research]({% link pages/research.md %}) page for current research papers.
 
@@ -41,6 +41,11 @@ May 2020 | Highest Honors
 ---
 
 ## Work Experience
+### Graduate Student Researcher, University of Colorado Boulder, Boulder, CO.
+2024 – Present
+* Researching perception and generative world models for autonomous vehicles and mobile robots with the [Collaborative AI and Robotics Lab](https://www.cairo-lab.com/) and the [Autonomous Robotics and Perception Group](https://arpg.github.io/)
+* See the [Research]({% link pages/research.md %}) page for publications
+
 ### Software Engineer II, AWS Ground Station - Amazon, Denver, CO.
 July 2022 - September 2023
 * Re-architected the code for computing antenna pointing directions to regionalize the data and prevent performing redundant computations
