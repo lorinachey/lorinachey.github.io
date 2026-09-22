@@ -27,6 +27,9 @@ research page. Usage: {% include publication.html pub=item %}
     {% if pub.venue_full and pub.venue_full != pub.venue %}
       <p class="pub-venue">{{ pub.venue_full }}</p>
     {% endif %}
+    {% if pub.highlight %}
+      <p class="pub-highlight">{{ pub.highlight }}</p>
+    {% endif %}
     <ul class="pub-links">
       {% for l in pub.links %}
         <li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.type }}</a></li>

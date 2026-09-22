@@ -8,6 +8,7 @@
 # selected: true     surfaces the entry on the home page
 
 - id: rf-multiagent
+  highlight: "Across 480+ simulated cave environments, cut distance travelled by up to 58% and exploration time by up to 52%."
   title: "RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration"
   authors: ["Lorin Achey", "Breanne Crockett", "Christoffer Heckman", "Bradley Hayes"]
   venue: "In review"
@@ -20,6 +21,7 @@
     - {type: "arXiv", url: "https://arxiv.org/abs/2602.12074"}
 
 - id: robust-exploration
+  highlight: "Deployed on a quadruped in real-world experiments: 24% better map fidelity around the robot and 76% better at range."
   title: "Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis"
   authors: ["Lorin Achey", "Alec Reed", "Brendan Crowe", "Bradley Hayes", "Christoffer Heckman"]
   venue: "Autonomous Robots"
@@ -33,6 +35,7 @@
     - {type: "arXiv", url: "https://arxiv.org/abs/2506.20049"}
 
 - id: online-diffusion
+  highlight: "73% faster runtime with minimal accuracy loss, extending prediction across the whole map rather than just around the robot."
   title: "Online Diffusion-Based 3D Occupancy Prediction at the Frontier with Probabilistic Map Reconciliation"
   authors: ["Alec Reed", "Lorin Achey", "Brendan Crowe", "Bradley Hayes", "Christoffer Heckman"]
   venue: "ICRA"
@@ -49,6 +52,7 @@
     - {type: "Project page", url: "https://arpg.github.io/scenesense/"}
 
 - id: scenesense
+  highlight: "Predicts occluded and out-of-view geometry in real time from a single RGB-D camera, without ever overwriting observed space."
   title: "SceneSense: Diffusion Models for 3D Occupancy Synthesis from Partial Observation"
   authors: ["Alec Reed", "Brendan Crowe", "Doncey Albin", "Lorin Achey", "Bradley Hayes", "Christoffer Heckman"]
   venue: "IROS"
