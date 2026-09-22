@@ -725,68 +725,22 @@ a.media-title:hover { color: var(--accent); }
   .talk { grid-template-columns: 1fr; }
 }
 
-/* ------------------------------------------------------------ explainer -- */
+/* -------------------------------------------------------- media caption -- */
 
-.explainer { margin: 0; max-width: var(--page-max); margin-inline: auto; }
-
-.explainer-svg {
-  width: 100%;
-  height: auto;
-  max-width: 900px;
-  margin: 0 auto var(--space-l);
-  display: block;
-  overflow: visible;
-}
-
-.ex-frame { fill: var(--surface); stroke: var(--rule); stroke-width: 1.5; }
-.ex-frame--accent { stroke: var(--accent); }
-
-.ex-observed rect  { fill: var(--accent); }
-.ex-unknown  rect  { fill: none; stroke: var(--rule); stroke-width: 1.5; stroke-dasharray: 3 3; }
-.ex-predicted rect { fill: var(--accent); opacity: 0.32; }
-
-.ex-wave path { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0.75; }
-.ex-wave path:nth-child(2) { opacity: 0.5; }
-.ex-wave path:nth-child(3) { opacity: 0.3; }
-
-.ex-arrow { fill: none; stroke: var(--ink-faint); stroke-width: 2; }
-
-.ex-outcome { fill: var(--accent-quiet); stroke: var(--accent); stroke-width: 1.5; }
-.ex-outcome-text {
-  fill: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 15px;
-}
-.ex-arrowhead { fill: var(--ink-faint); }
-
-.explainer-steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: var(--space-m);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+.media-caption {
+  max-width: var(--measure);
+  margin-bottom: var(--space-m);
   color: var(--ink-muted);
 }
-.explainer-steps li { margin: 0; }
 
-.explainer-step {
+.media-kicker {
   display: block;
   font-family: var(--font-mono);
   font-size: var(--step--1);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: var(--ink-faint);
   margin-bottom: var(--space-2xs);
-}
-
-/* On a phone the three stages are unreadable side by side; the captions below
-   carry the explanation, so the diagram scrolls rather than shrinking. */
-@media (max-width: 640px) {
-  .explainer-svg { min-width: 560px; }
-  .explainer > .explainer-svg { max-width: none; }
-  .explainer { overflow-x: auto; }
-  .explainer-steps { min-width: 0; }
 }
 
 /* -------------------------------------------------------------- threads -- */
@@ -815,35 +769,10 @@ a.media-title:hover { color: var(--accent); }
   font-size: var(--step--1);
 }
 
-/* A thread diagram sits between the thread summary and its papers, so it needs
-   to read as part of the thread rather than as a page-level banner. */
-.thread .explainer {
-  margin-bottom: var(--space-l);
-  padding: var(--space-l);
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-}
-
-.explainer-caption {
-  max-width: var(--measure);
-  margin-bottom: var(--space-m);
-  color: var(--ink-muted);
-}
-
-.explainer-kicker {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: var(--step--1);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-faint);
-  margin-bottom: var(--space-2xs);
-}
-
 /* A thread can carry its own accent so separate lines of work read as
    separate. Overriding the token on the thread re-colours everything inside
-   it -- rule, diagram, highlight bars, links -- with no per-component rules.
+   it -- rule, video caption, highlight bars, links -- with no per-component
+   rules.
    Status badge colours are deliberately not included: published/in-review
    must mean the same thing everywhere on the page. */
 .thread--violet {

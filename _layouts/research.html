@@ -46,9 +46,6 @@ publications.yml can never silently vanish from the page.
       {% elsif thread.summary %}
         <p class="thread-summary">{{ thread.summary }}</p>
       {% endif %}
-      {% if thread.diagram %}
-        {% include diagrams/{{ thread.diagram }}.html %}
-      {% endif %}
       {% if thread.video %}
         {% include video-embed.html video=thread.video %}
       {% endif %}
