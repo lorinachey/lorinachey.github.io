@@ -24,7 +24,7 @@ At the closing ceremony, I was honored to receive the **Best Robot Trainer Award
 
 Another memorable part of the workshop was getting to participate in a show on [KOTO-FM](https://koto.org/), Telluride’s community radio station. Sharing the workshop with a local audience was a special way to connect the research happening in town with the people who call Telluride home.
 
-![On air at KOTO-FM during the Telluride Neuromorphic AI Workshop]({{ site.github.url }}/assets/img/telluride-neuromorphic-ai-2026/KOTO-FM-radio-show-signal-2026-07-23-08-47-18-059.jpg)
+![On air at KOTO-FM during the Telluride Neuromorphic AI Workshop]({{ '/assets/img/telluride-neuromorphic-ai-2026/KOTO-FM-radio-show-signal-2026-07-23-08-47-18-059.jpg' | relative_url }})
 
 ## Looking ahead
 
