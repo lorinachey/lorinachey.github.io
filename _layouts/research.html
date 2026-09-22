@@ -22,6 +22,9 @@ publications.yml can never silently vanish from the page.
       {% if thread.diagram %}
         {% include diagrams/{{ thread.diagram }}.html %}
       {% endif %}
+      {% if thread.video %}
+        {% include video-embed.html video=thread.video %}
+      {% endif %}
       <div class="pub-list">
         {% for pid in thread.publications %}
           {% assign pub = site.data.publications | where: "id", pid | first %}

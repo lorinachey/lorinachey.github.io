@@ -8,5 +8,8 @@
       {{ content }}
     </main>
     {% include footer.html %}
+    {% if page.has_video %}
+      <script src="{{ '/assets/js/video-facade.js' | relative_url }}" defer></script>
+    {% endif %}
   </body>
 </html>

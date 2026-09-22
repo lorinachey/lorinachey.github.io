@@ -2,6 +2,7 @@
 layout: research
 title: Research
 permalink: /research
+has_video: true
 ---
 
 I build perception systems for autonomous vehicles and mobile robots, with an

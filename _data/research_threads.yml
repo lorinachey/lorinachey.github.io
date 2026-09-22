@@ -21,6 +21,13 @@
   # `accent` scopes a different colour to this thread so it reads as a separate
   # line of work. Maps to a .thread--<name> class in main.scss.
   accent: violet
+  video:
+    id: ZnzxFrlIcxE
+    title: "RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration: a 60 second summary"
+    caption: "A sixty-second summary of the multi-agent exploration work."
+    image: talks/rf-multiagent-ZnzxFrlIcxE.jpg
+    image_alt: "Two robots exploring a subterranean course during a timed multi-agent run"
+    duration: "1:00"
   summary: >-
     When a team of robots explores somewhere the radio does not reach, the
     hard problem stops being perception and becomes deciding where and when to
