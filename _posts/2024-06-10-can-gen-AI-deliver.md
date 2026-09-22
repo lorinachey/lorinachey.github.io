@@ -5,6 +5,7 @@ author: "Lorin Achey"
 categories: news
 tags: [gen-ai]
 image: scene-sense-diffusion-models.PNG
+thumb: thumbs/scenesense.jpg
 ---
 
 Diffusion models are pretty incredible and we are only just beginning to apply them in the robotics domain. We are applying diffusion models to help generate predicted geometry beyond occlusions. You can [read our manuscrcipt here](https://arxiv.org/abs/2403.11985)!

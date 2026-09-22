@@ -4,6 +4,7 @@ title: "CU Boulder Spotlight Article"
 author: "Lorin Achey"
 categories: news
 image: cu-article-snippet.png
+thumb: thumbs/cu-article.jpg
 ---
 
 👉 [Read the full article on CU Boulder’s website](https://www.colorado.edu/cs/achey-earns-department-defense-ndseg-fellowship).

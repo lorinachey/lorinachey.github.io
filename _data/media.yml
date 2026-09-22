@@ -7,15 +7,22 @@
   date: 2026-07-27
   type: radio
   post: 2026-07-27-telluride-neuromorphic-ai-workshop
+  thumb: thumbs/telluride.jpg
 
 - title: "Achey earns Department of Defense NDSEG Fellowship"
   outlet: "CU Boulder College of Engineering & Applied Science"
   date: 2025-08-26
   type: article
   url: "https://www.colorado.edu/cs/achey-earns-department-defense-ndseg-fellowship"
+  thumb: thumbs/cu-article.jpg
 
 - title: "Diversity and Inclusion Fellow, Class of 2019"
   outlet: "Georgia Tech College of Computing"
   date: 2019-01-01
   type: article
   url: "https://www.cc.gatech.edu/news/shana-white-named-georgia-tech-diversity-and-inclusion-fellow-class-2019"
+  # The article's own og:image is a photo of Shana White, who the piece is
+  # about; Lorin is named in it as a fellow of the same class. The thumbnail is
+  # the publication masthead instead, to avoid implying the photo is of Lorin.
+  thumb: thumbs/gt-dni-fellow.jpg
+  thumb_alt: "Georgia Tech College of Computing masthead"
