@@ -17,10 +17,41 @@ updating the research/resume pages — not writing code.
 - **`gh-pages` is the default and production branch.** There is no `main`.
   GitHub Pages builds and publishes whatever lands on `gh-pages`, so a merge to
   `gh-pages` is a deploy to the live site.
-- `origin/dev` is a stale historical branch (71 commits behind `gh-pages`, 0
-  ahead). Do not branch from it or push to it.
+- **`dev` is a long-lived integration branch** for the in-progress site
+  overhaul. It is not production and is never deployed — GitHub Pages only ever
+  builds `gh-pages`. Work accumulates on `dev`, is reviewed locally at
+  `localhost:4000`, and reaches the live site through a single PR at launch.
 
 ## Workflow: feature branch → PR
+
+### While the overhaul is in progress
+
+Overhaul work is staged. Each stage is its own branch off `dev`, merged back
+into `dev` with `--no-ff` so any stage can be reverted as one commit:
+
+```bash
+git checkout dev && git pull --ff-only
+git checkout -b redesign/NN-topic
+# ... work, commit, verify at localhost:4000 ...
+git checkout dev && git merge --no-ff redesign/NN-topic
+git push origin dev
+git branch -d redesign/NN-topic
+```
+
+Stage branches do not need PRs — there is no second reviewer, and each stage is
+verified in the browser before it merges. The `redesign/NN-` prefix keeps them
+sorted and distinct from the `post/`, `content/`, `fix/`, `style/` prefixes
+below.
+
+**Only `dev` → `gh-pages` goes through a PR**, once at launch, merged `--no-ff`
+so the whole overhaul is a single revertable unit. Rollback is
+`git revert -m 1 <merge-sha>` on `gh-pages`.
+
+If an urgent fix lands on `gh-pages` while `dev` is in flight, merge `gh-pages`
+into `dev` immediately rather than letting the branches diverge — unmanaged
+divergence is what made the previous `dev` branch go stale.
+
+### For ordinary changes to the live site
 
 Never commit directly to `gh-pages`. Every change goes through a short-lived
 feature branch and a pull request, even a one-line typo fix, because merging is
