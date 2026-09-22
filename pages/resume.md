@@ -9,8 +9,8 @@ permalink: /resume
 
 ## Awards & Accolades
 
-* **Best Robot Trainer Award**, Telluride Neuromorphic AI Workshop — 2026 ([blog post](https://lorinachey.github.io/telluride-neuromorphic-ai-workshop-2026))
-* **NDSEG Fellowship**, Department of Defense — 2025 ([blog post](https://lorinachey.github.io/im-an-ndseg-fellow) · [CU Boulder spotlight](https://lorinachey.github.io/cu-boulder-spotlight-article))
+* **Best Robot Trainer Award**, Telluride Neuromorphic AI Workshop — 2026 ([blog post]({% post_url 2026-07-27-telluride-neuromorphic-ai-workshop %}))
+* **NDSEG Fellowship**, Department of Defense — 2025 ([blog post]({% post_url 2025-04-02-ndseg-fellowship %}) · [CU Boulder spotlight]({% post_url 2025-08-26-cu-engas-article %}))
 
 ---
 
@@ -20,8 +20,7 @@ permalink: /resume
 **Ph.D. in Computer Science & Robotics** | Expected 2028 \
 **M.S. in Computer Science** | Expected May 2026
 * Specializing in AI/ML for Autonomous Vehicles and Mobile Robots
-* See the [Research](https://lorinachey.github.io/research) page for current research papers.
-* See the [Coursework](https://lorinachey.github.io/coursework) page for a list of courses taken and a plan for future coursework.
+* See the [Research]({% link pages/research.md %}) page for current research papers.
 
 ### Georgia Institute of Technology, B.S. in Computer Science
 May 2020 | Highest Honors
