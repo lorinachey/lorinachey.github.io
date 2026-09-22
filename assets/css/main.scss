@@ -290,7 +290,7 @@ th { font-family: var(--font-mono); font-size: var(--step--1); text-transform: u
 }
 .post-list-item:first-child { padding-top: 0; }
 
-.post-list-item a {
+.post-list-title {
   font-family: var(--font-serif);
   font-size: var(--step-1);
   font-weight: 600;
@@ -298,7 +298,34 @@ th { font-family: var(--font-mono); font-size: var(--step--1); text-transform: u
   text-decoration: none;
   display: block;
 }
-.post-list-item a:hover { color: var(--accent); }
+.post-list-title:hover { color: var(--accent); }
+
+/* Thumbnails are decorative -- the title beside them is the real link -- so
+   they carry empty alt text and are skipped by the keyboard tab order. */
+.post-list-item--thumb,
+.media-item--thumb {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: var(--space-m);
+  align-items: start;
+}
+
+.post-thumb {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-sunk);
+  border: 1px solid var(--rule);
+}
+.post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+@media (max-width: 480px) {
+  .post-list-item--thumb,
+  .media-item--thumb { grid-template-columns: 64px minmax(0, 1fr); gap: var(--space-s); }
+  .post-thumb { width: 64px; height: 64px; }
+}
 
 .post-list-item time {
   font-family: var(--font-mono);

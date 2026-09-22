@@ -4,6 +4,7 @@ title: "Telluride Neuromorphic AI Workshop 2026"
 author: "Lorin Achey"
 categories: news
 image: telluride-neuromorphic-ai-2026/award-ceremony-signal-2026-07-17-210228.jpeg
+thumb: thumbs/telluride.jpg
 ---
 
 This summer I spent three weeks in the mountains of Telluride, Colorado for the [2026 Telluride Neuromorphic AI Workshop](https://sites.google.com/view/telluride-2026/home) — an intense, collaborative, and genuinely fun experience that I will remember for a long time.
