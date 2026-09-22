@@ -1,18 +1,4 @@
 # Technical projects and write-ups.
-- title: "Sim-to-Sim Transfer Framework"
-  summary: >-
-    A simulation-to-simulation transfer pipeline for validating control policies
-    across physics engines, comparing IsaacSim with MuJoCo.
-  links:
-    - {type: "Write-up (PDF)", url: "/assets/pdf/Sim2SimTransferQuadrupedRobots-1.pdf", local: true}
-
-- title: "PaliGemma from Scratch"
-  summary: >-
-    A reimplementation of the PaliGemma vision-language model architecture in
-    PyTorch, built end to end to work through multimodal integration and
-    large-model design.
-  links:
-    - {type: "GitHub", url: "https://github.com/lorinachey/vision-language-models/blob/main/paligemma-from-scratch.ipynb"}
 
 - title: "IsaacSim with Docker, ROS2 and Octomap"
   summary: >-
@@ -28,3 +14,18 @@
   links:
     - {type: "Watch", url: "https://www.youtube.com/watch?v=9EkkdjW4N54"}
     - {type: "GitHub", url: "https://github.com/CodeMechanicsLLC/isaacsim-ros2-docker"}
+
+- title: "Sim-to-Sim Transfer Framework"
+  summary: >-
+    A simulation-to-simulation transfer pipeline for validating control policies
+    across physics engines, comparing IsaacSim with MuJoCo.
+  links:
+    - {type: "Write-up (PDF)", url: "/assets/pdf/Sim2SimTransferQuadrupedRobots-1.pdf", local: true}
+
+- title: "PaliGemma from Scratch"
+  summary: >-
+    A reimplementation of the PaliGemma vision-language model architecture in
+    PyTorch, built end to end to work through multimodal integration and
+    large-model design.
+  links:
+    - {type: "GitHub", url: "https://github.com/lorinachey/vision-language-models/blob/main/paligemma-from-scratch.ipynb"}

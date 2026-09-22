@@ -5,7 +5,7 @@ and home page all stay in sync.
 <ul class="social-links {{ include.class }}">
   {% for item in site.data.settings.social %}
     <li>
-      <a href="{{ item.link }}"{% unless item.icon == 'email' %} target="_blank" rel="noopener"{% endunless %}>
+      <a href="{{ item.link }}" target="_blank" rel="noopener">
         {% include icon.html name=item.icon %}
         <span{% if include.labels != true %} class="visually-hidden"{% endif %}>{{ item.name }}</span>
       </a>
