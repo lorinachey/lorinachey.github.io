@@ -12,7 +12,9 @@
   image_alt: >-
     A quadruped robot standing on simulated rough terrain, surrounded by a grid
     of sampled height points
-  image_caption: "A quadruped sampling terrain height around it in simulation."
+  image_caption: >-
+    A quadruped sampling terrain around it in simulation while training with
+    distributional reinforcement learning.
   summary: >-
     A quadruped crossing rough ground has to trade progress against the chance
     of a fall, and an average-case policy hides exactly that trade-off. This
