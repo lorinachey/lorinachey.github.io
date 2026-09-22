@@ -12,6 +12,7 @@ I am a PhD student and 2025 NDSEG Fellowship recipient at the University of Colo
 #### Currently open to
 
 * **Research internships** for summer 2027 and summer 2028
+* **Visiting researcher positions** at other universities. I would like to spend time in other labs to trade ideas and start collaborations, and I bring my own funding, so hosting me need not carry a financial commitment.
 * **Research collaborations** on generative occupancy prediction, multi-agent exploration, and risk-sensitive locomotion
 * **Research scientist and postdoctoral positions** from 2028, when I expect to complete my PhD
 
