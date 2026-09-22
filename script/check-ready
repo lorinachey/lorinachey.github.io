@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Refuses to publish while any content is still a placeholder.
+# Runs only on the deploy path, so work-in-progress on dev stays green.
+set -euo pipefail
+
+fail=0
+if grep -rn "needs_copy: true" _data/ 2>/dev/null; then
+  echo "::error::Placeholder copy found above. Write the summary before publishing."
+  fail=1
+fi
+if grep -rln "PLACEHOLDER" _includes/ index.html 2>/dev/null | grep -q .; then
+  echo "::warning::Placeholder asset references found; confirm these are intended."
+fi
+exit $fail

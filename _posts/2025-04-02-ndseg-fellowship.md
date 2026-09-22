@@ -2,8 +2,9 @@
 layout: post
 title: "I'm an NDSEG Fellow!"
 author: "Lorin Achey"
-categories: facts
+categories: news
 image: ndseg-fellowship.png
+thumb: thumbs/ndseg.jpg
 ---
 
 In April, I received notification that I had been selected as a 2025 NDSEG Fellowship recipient! I'm thrilled to

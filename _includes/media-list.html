@@ -1,0 +1,33 @@
+{%- comment -%}
+Press and media coverage. Entries link out to the outlet, or to a post on this
+site when the coverage is written up here.
+{%- endcomment -%}
+<ul class="media-list">
+  {% for item in include.items %}
+    {%- assign href = item.url -%}
+    {%- if item.post -%}
+      {%- assign p = site.posts | where_exp: "x", "x.path contains item.post" | first -%}
+      {%- if p %}{% assign href = p.url | relative_url %}{% endif -%}
+    {%- endif -%}
+    <li class="media-item{% if item.thumb %} media-item--thumb{% endif %}">
+      {% if item.thumb %}
+        <span class="post-thumb">
+          <img src="{{ item.thumb | prepend: '/assets/img/' | relative_url }}"
+               alt="{{ item.thumb_alt }}" width="88" height="88" loading="lazy">
+        </span>
+      {% endif %}
+      <div class="media-body">
+        <p class="media-meta">
+          <span class="media-type media-type--{{ item.type }}">{{ item.type }}</span>
+          <span class="media-outlet">{{ item.outlet }}</span>
+          {% if item.date %}<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%B %Y" }}</time>{% endif %}
+        </p>
+        {% if href %}
+          <a class="media-title" href="{{ href }}"{% unless item.post %} target="_blank" rel="noopener"{% endunless %}>{{ item.title }}</a>
+        {% else %}
+          <span class="media-title">{{ item.title }}</span>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

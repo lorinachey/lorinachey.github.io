@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+<div class="page-content">
+  <h1>{{ page.title }}</h1>
+  <div class="lede">{{ content }}</div>
+
+  {%- comment -%}
+    Built from the threads data rather than hand-written, so adding or renaming
+    a thread updates these links automatically.
+  {%- endcomment -%}
+  <p class="page-jump">
+    Read more about my work on
+    {% for thread in site.data.research_threads -%}
+      {%- unless forloop.first -%}
+        {%- if forloop.last -%}
+          {%- if site.data.research_threads.size > 2 %}, and {% else %} and {% endif -%}
+        {%- else %}, {% endif -%}
+      {%- endunless -%}
+      <a href="#{{ thread.id }}">{{ thread.title | downcase }}</a>
+    {%- endfor -%}.
+    You can also see my <a href="#talks">talks</a> and <a href="#projects">projects</a>.
+  </p>
+</div>
+
+{%- comment -%}
+Papers are grouped into threads so the page reads as a progression. Anything
+not listed in a thread still appears, under "Other work", so a new entry in
+publications.yml can never silently vanish from the page.
+{%- endcomment -%}
+<section class="band band--sunk band--flush">
+  <p class="eyebrow">Research threads</p>
+  {% assign grouped = "" | split: "" %}
+  {% for thread in site.data.research_threads %}
+    <div class="thread{% if thread.accent %} thread--{{ thread.accent }}{% endif %}" id="{{ thread.id }}">
+      <h2 class="thread-title">
+        {{ thread.title }}
+        {% if thread.status %}<span class="thread-status">{{ thread.status }}</span>{% endif %}
+      </h2>
+      {% if thread.needs_copy %}
+        <p class="thread-todo" role="note">
+          Placeholder &mdash; this thread still needs a written summary. The
+          production build refuses to publish while this is here.
+        </p>
+      {% elsif thread.summary %}
+        <p class="thread-summary">{{ thread.summary }}</p>
+      {% endif %}
+      {% if thread.image %}
+        <figure class="thread-figure">
+          <img src="{{ thread.image | prepend: '/assets/img/' | relative_url }}"
+               alt="{{ thread.image_alt }}" loading="lazy">
+          {% if thread.image_caption %}
+            <figcaption class="media-caption">{{ thread.image_caption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endif %}
+      {% if thread.video %}
+        {% include video-embed.html video=thread.video %}
+      {% endif %}
+      <div class="pub-list">
+        {% for pid in thread.publications %}
+          {% assign pub = site.data.publications | where: "id", pid | first %}
+          {% if pub %}
+            {% include publication.html pub=pub %}
+            {% assign grouped = grouped | push: pid %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+
+  {% assign ungrouped = "" | split: "" %}
+  {% for pub in site.data.publications %}
+    {% unless grouped contains pub.id %}{% assign ungrouped = ungrouped | push: pub %}{% endunless %}
+  {% endfor %}
+  {% if ungrouped.size > 0 %}
+    <div class="thread">
+      <h2 class="thread-title">Other work</h2>
+      <div class="pub-list">
+        {% for pub in ungrouped %}{% include publication.html pub=pub %}{% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+<section class="band band--flush" id="talks">
+  <p class="eyebrow">Talks</p>
+  <div class="talk-list">
+    {% for talk in site.data.talks %}
+      {% include talk.html talk=talk %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band band--sunk band--flush" id="projects">
+  <p class="eyebrow">Projects</p>
+  <div class="cards">
+    {% for proj in site.data.projects %}
+      <article class="card{% if proj.video %} card--media{% endif %}"
+               {% if proj.video %}data-video="{{ proj.video.id }}"{% endif %}>
+        {% if proj.video %}{% include video-poster.html video=proj.video %}{% endif %}
+        <div class="card-body">
+          <h3>{{ proj.title }}</h3>
+          <p>{{ proj.summary }}</p>
+          <ul class="pub-links">
+            {% for l in proj.links %}
+              <li><a href="{% if l.local %}{{ l.url | relative_url }}{% else %}{{ l.url }}{% endif %}"{% unless l.local %} target="_blank" rel="noopener"{% endunless %}>{{ l.type }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

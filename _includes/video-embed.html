@@ -1,0 +1,19 @@
+{%- comment -%}
+Standalone click-to-play YouTube embed, in its own card.
+
+A plain iframe embed costs roughly 1MB and a set of third-party cookies on
+every page load, whether or not anyone watches. This shows a self-hosted
+poster and only loads the player on click, against youtube-nocookie.com.
+
+Usage: {% include video-embed.html video=thread.video %}
+{%- endcomment -%}
+{%- assign v = include.video -%}
+<figure class="video-embed" data-video="{{ v.id }}">
+  {% if v.caption %}
+    <figcaption class="media-caption">
+      <span class="media-kicker">Watch</span>
+      {{ v.caption }}
+    </figcaption>
+  {% endif %}
+  {% include video-poster.html video=v %}
+</figure>

@@ -1,0 +1,13 @@
+# Talks and presentations.
+#
+# NOTE: `venue`, `date` and `audience` are unset because they are recorded
+# nowhere in this repo and must come from Lorin. The template omits any field
+# left blank rather than guessing. Do not fill these in from inference.
+- title: "Advancing Robotics with Vision-Language-Action Models"
+  venue:
+  date:
+  video: "https://www.youtube.com/watch?v=8uScOex5704"
+  # Thumbnail is self-hosted rather than hotlinked from img.youtube.com, so the
+  # page holds no third-party request and does not break if YouTube changes it.
+  image: talks/vla-talk-8uScOex5704.jpg
+  image_alt: "Title frame of the Vision-Language-Action models talk"

@@ -1,0 +1,6 @@
+{%- comment -%}
+Inline SVG icon. Replaces Font Awesome, which had no Scholar or arXiv glyph and
+loaded a render-blocking font from a CDN to draw three icons.
+Usage: {% include icon.html name="github" %}
+{%- endcomment -%}
+<span class="icon" aria-hidden="true">{% include icons/{{ include.name }}.svg %}</span>

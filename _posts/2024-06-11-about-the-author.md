@@ -2,9 +2,10 @@
 layout: post
 title: "About the Author"
 author: "Lorin Achey"
-categories: facts
+categories: news
 tags: [sample]
 image: lorin-cosmo-aspens.JPG
+thumb: thumbs/about-the-author.jpg
 ---
 
 Before pursuing a PhD, I spent several years in industry developing professional software engineering skills, gaining exposure to large scale software systems, and figuring out where I wanted to develop niche expertise! I am excited to start a new chapter in the PhD program for Computer Science and Robotics at CU Boulder!

@@ -1,18 +1,34 @@
 # Site Build Settings
 
-# jekyll-paginate configuration
-paginate:            5
-
 # Build settings
 markdown:            kramdown
 highlighter:         rouge
 permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+plugins:             [jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jekyll-redirect-from]
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+# Site identity. `url` is what jekyll-seo-tag, jekyll-feed, and jekyll-sitemap
+# use for canonical URLs, feed entry links, and <loc> entries. `jekyll serve`
+# overrides it with localhost in development; use JEKYLL_ENV=production to
+# verify the real values.
+url:                 "https://lorinachey.github.io"
+baseurl:             ""
 title:		           "Lorin Achey"
 description:	       "Personal Website"
-# author:              "Lorin Achey"
+author:              "Lorin Achey"
+
+# NOTE: setting `exclude` REPLACES Jekyll's default exclude list rather than
+# extending it, so the defaults are restated here.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - node_modules/
+  - README.md
+  - LICENSE.md
+  - CLAUDE.md
+  - millennial.gemspec
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:

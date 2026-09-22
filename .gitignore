@@ -1,5 +1,5 @@
 _site
-Gemfile.lock
+# Gemfile.lock is committed: CI builds the live site and must be reproducible.
 .sass-cache
 .jekyll-metadata
 .DS_Store

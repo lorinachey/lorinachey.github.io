@@ -4,7 +4,7 @@
 layout: signal_integrity_post
 title: "Signal Integrity Exploration"
 author: "Lorin Achey"
-categories: facts
+categories: news
 tags: [signals]
 image: pcbs-ecen.jpg
 ---

@@ -1,0 +1,60 @@
+# Research threads. Papers are grouped and ordered oldest-first within a thread
+# so the page reads as a progression rather than a list.
+#
+# Summaries are paraphrased from the papers' own abstracts -- no claims here
+# that Lorin has not already published. Worth her review all the same.
+
+- id: risk
+  title: "Risk-sensitive locomotion and navigation"
+  accent: green
+  status: "In preparation"
+  image: risk-RL-work/spot-height-grid.jpg
+  image_alt: >-
+    A quadruped robot standing on simulated rough terrain, surrounded by a grid
+    of sampled height points
+  image_caption: >-
+    A quadruped sampling terrain around it in simulation while training with
+    distributional reinforcement learning.
+  summary: >-
+    This work uses distributional reinforcement learning, which models the whole
+    distribution of outcomes rather than just the expected return, to learn
+    navigation and locomotion policies for quadruped agents that account for
+    risk directly.
+  publications: []
+
+- id: occupancy
+  title: "Generative occupancy for exploration"
+  summary: >-
+    Robots normally plan only over geometry they have directly measured, so
+    they stall when they turn a corner or enter a new room. This thread trains
+    diffusion models to predict the geometry that has not been seen yet, fuses
+    those predictions into a live occupancy map without ever overwriting
+    observed space, and uses the result to keep exploring instead of pausing.
+  video:
+    id: dv0r7RibIPE
+    title: "Boston Dynamics Spot robot performing generative occupancy mapping in real time"
+    caption: "Generative occupancy mapping running live on a Spot robot."
+    image: talks/generative-occupancy-dv0r7RibIPE.jpg
+    image_alt: "A Boston Dynamics Spot robot mapping an indoor space, with the predicted occupancy map alongside"
+    duration: "2:41"
+  publications: [scenesense, online-diffusion, robust-exploration]
+
+- id: multiagent
+  title: "Multi-agent coordination under communication constraints"
+  # `accent` scopes a different colour to this thread so it reads as a separate
+  # line of work. Maps to a .thread--<name> class in main.scss.
+  accent: violet
+  video:
+    id: ZnzxFrlIcxE
+    title: "RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration: a 60 second summary"
+    caption: "A sixty-second summary of the multi-agent exploration work."
+    image: talks/rf-multiagent-ZnzxFrlIcxE.jpg
+    image_alt: "Two robots exploring a subterranean course during a timed multi-agent run"
+    duration: "1:00"
+  summary: >-
+    When a team of robots explores somewhere the radio does not reach, the
+    hard problem stops being perception and becomes deciding where and when to
+    transmit. This work plans transmission locations from signal strength and
+    payload size, so agents share what they have found without backtracking to
+    meet.
+  publications: [rf-multiagent]

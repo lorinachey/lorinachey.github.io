@@ -1,0 +1,41 @@
+# Press and media coverage, newest first.
+#
+# NOTE: this list is what could be recovered from the repo. Lorin may have more
+# to add -- outlet, date and URL for each. Do not invent entries.
+#
+# Thumbnails for external articles deliberately use the publication masthead
+# where the article's own og:image is a photo of someone else. Two of these
+# articles are primarily about other people and name Lorin in the body.
+- title: "Best Robot Trainer Award and a KOTO-FM segment at the Telluride Neuromorphic AI Workshop"
+  outlet: "KOTO-FM, Telluride"
+  date: 2026-07-27
+  type: radio
+  post: 2026-07-27-telluride-neuromorphic-ai-workshop
+  thumb: thumbs/telluride.jpg
+
+- title: "Achey earns Department of Defense NDSEG Fellowship"
+  outlet: "CU Boulder College of Engineering & Applied Science"
+  date: 2025-08-26
+  type: article
+  url: "https://www.colorado.edu/cs/achey-earns-department-defense-ndseg-fellowship"
+  thumb: thumbs/cu-article.jpg
+
+- title: "Diversity and Inclusion Fellow, Class of 2019"
+  outlet: "Georgia Tech College of Computing"
+  date: 2019-01-01
+  type: article
+  url: "https://www.cc.gatech.edu/news/shana-white-named-georgia-tech-diversity-and-inclusion-fellow-class-2019"
+  # The article's own og:image is a photo of Shana White, who the piece is
+  # about; Lorin is named in it as a fellow of the same class. The thumbnail is
+  # the publication masthead instead, to avoid implying the photo is of Lorin.
+  thumb: thumbs/gt-dni-fellow.jpg
+  thumb_alt: "Georgia Tech College of Computing masthead"
+
+- title: "Space Innovators Gather @ Georgia Tech to Contemplate the Future"
+  outlet: "Georgia Tech Daniel Guggenheim School of Aerospace Engineering"
+  date: 2018-11-13
+  type: article
+  url: "https://ae.gatech.edu/news/2018/11/space-innovators-gather-georgia-tech-contemplate-future"
+  # og:image shows a different team's poster, so the masthead is used instead.
+  thumb: thumbs/gt-space-symposium.jpg
+  thumb_alt: "Georgia Tech Daniel Guggenheim School of Aerospace Engineering masthead"

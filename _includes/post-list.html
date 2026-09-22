@@ -1,0 +1,16 @@
+<ul class="post-list">
+  {% for post in include.posts %}
+    <li class="post-list-item{% if post.thumb %} post-list-item--thumb{% endif %}">
+      {% if post.thumb %}
+        <a class="post-thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ post.thumb | prepend: '/assets/img/' | relative_url }}"
+               alt="" width="88" height="88" loading="lazy">
+        </a>
+      {% endif %}
+      <div class="post-list-body">
+        <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
