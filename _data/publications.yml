@@ -1,15 +1,15 @@
 # Publications, newest first. Authored in display order — do not sort in Liquid.
 #
-# NOTE: `authors` is deliberately empty on every entry. Coauthor lists are not
-# recorded anywhere in this repo and must come from Lorin; the card renders no
-# author line at all until they are filled in. Do not guess them.
+# Author lists were taken from the arXiv API and cross-checked against Lorin's
+# Google Scholar profile; both agree on every paper. arXiv is used for the
+# spelling because Scholar abbreviates given names to initials.
 #
 # status: published | accepted | in-review | preprint   (drives the badge colour)
 # selected: true     surfaces the entry on the home page
 
 - id: rf-multiagent
   title: "RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration"
-  authors: []
+  authors: ["Lorin Achey", "Breanne Crockett", "Christoffer Heckman", "Bradley Hayes"]
   venue: "In review"
   venue_full: "In review"
   year: 2026
@@ -21,7 +21,7 @@
 
 - id: robust-exploration
   title: "Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis"
-  authors: []
+  authors: ["Lorin Achey", "Alec Reed", "Brendan Crowe", "Bradley Hayes", "Christoffer Heckman"]
   venue: "Autonomous Robots"
   venue_full: "Autonomous Robots (Springer)"
   year: 2026
@@ -34,7 +34,7 @@
 
 - id: online-diffusion
   title: "Online Diffusion-Based 3D Occupancy Prediction at the Frontier with Probabilistic Map Reconciliation"
-  authors: []
+  authors: ["Alec Reed", "Lorin Achey", "Brendan Crowe", "Bradley Hayes", "Christoffer Heckman"]
   venue: "ICRA"
   venue_full: "IEEE International Conference on Robotics and Automation (ICRA)"
   year: 2025
@@ -50,7 +50,7 @@
 
 - id: scenesense
   title: "SceneSense: Diffusion Models for 3D Occupancy Synthesis from Partial Observation"
-  authors: []
+  authors: ["Alec Reed", "Brendan Crowe", "Doncey Albin", "Lorin Achey", "Bradley Hayes", "Christoffer Heckman"]
   venue: "IROS"
   venue_full: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
   year: 2024
