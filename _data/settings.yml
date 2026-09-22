@@ -1,6 +1,3 @@
-# Contact address used in the footer and on the home page.
-email: lorin.achey@colorado.edu
-
 menu:
 - {name: 'Research',  url: 'research'}
 - {name: 'CV',        url: 'resume'}
@@ -14,6 +11,5 @@ social:
 - {name: 'YouTube',        icon: 'youtube',  link: 'https://www.youtube.com/@CodeMechanicsPhD'}
 - {name: 'GitHub',         icon: 'github',   link: 'https://github.com/lorinachey'}
 - {name: 'LinkedIn',       icon: 'linkedin', link: 'https://linkedin.com/in/lorinachey'}
-- {name: 'Email',          icon: 'email',    link: 'mailto:lorin.achey@colorado.edu'}
 
 post_date_prefix: 'Written on'
