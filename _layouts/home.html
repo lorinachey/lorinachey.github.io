@@ -3,6 +3,4 @@ layout: default
 title: Home
 ---
 
-{% for post in site.posts %}
-  {% include featured-post.html %}
-{% endfor %}
+{% include post-list.html posts=site.posts %}
