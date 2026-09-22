@@ -11,7 +11,7 @@ layout: default
   {% endif %}
   {% if page.image %}
     <div class="featured-image">
-      <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+      <img src="{{ site.github.url }}/assets/img/{{ page.image }}" alt="{{ page.image_alt | default: page.title }}">
     </div>
   {% endif %}
   <article>
@@ -20,22 +20,22 @@ layout: default
 
   <div class="featured-image">
     <p class="image-caption">An ADS simulation (2-layer, 4-layer) simulating a Time Domain Reflectometer.</p>
-    <img src="{{ site.github.url }}/assets/img/board1_TDR_simulation_in_ADS.PNG">
+    <img src="{{ site.github.url }}/assets/img/board1_TDR_simulation_in_ADS.PNG" alt="TDR simulation of the test board in Keysight ADS">
   </div>  
 
   <div class="featured-image">
     <p class="image-caption">A PCB designed to get as close as possible to target impedances using trace widths estimated from 2D field solvers.</p>
-    <img src="{{ site.github.url }}/assets/img/board1_z0_matching.PNG">
+    <img src="{{ site.github.url }}/assets/img/board1_z0_matching.PNG" alt="Characteristic impedance matching on the first test board">
   </div>
 
   <div class="featured-image">
     <p class="image-caption">A PCB designed for comparing the differential impedance and cross talk of a loosely coupled differential pair and a tightly coupled differential pair.</p>
-    <img src="{{ site.github.url }}/assets/img/board2_differential_pairs_tight_and_loose_coupling.PNG">
+    <img src="{{ site.github.url }}/assets/img/board2_differential_pairs_tight_and_loose_coupling.PNG" alt="Differential pairs routed with tight and loose coupling">
   </div>
 
   <div class="featured-image">
     <p class="image-caption">A PCB designed for comparing impedance discontinuities based on corner shape.</p>
-    <img src="{{ site.github.url }}/assets/img/board3_different_shaped_traces.PNG">
+    <img src="{{ site.github.url }}/assets/img/board3_different_shaped_traces.PNG" alt="Test board comparing differently shaped PCB traces">
   </div>
 
   {% if site.hide_post_share != true %}
