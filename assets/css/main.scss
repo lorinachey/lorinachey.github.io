@@ -929,3 +929,28 @@ html { scroll-behavior: smooth; }
 @media (max-width: 720px) {
   .card--media { grid-template-columns: 1fr; }
 }
+
+/* ---------------------------------------------------------- availability -- */
+
+.availability {
+  max-width: var(--measure);
+  margin: var(--space-l) 0;
+  padding: var(--space-m) var(--space-l);
+  background: var(--accent-quiet);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.availability h4 {
+  margin: 0 0 var(--space-s);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.availability ul { margin-bottom: var(--space-s); }
+.availability li { margin-bottom: var(--space-2xs); }
+.availability > p:last-child { margin-bottom: 0; font-size: var(--step--1); }
