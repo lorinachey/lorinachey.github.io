@@ -1,0 +1,14 @@
+{%- comment -%}
+Profile links, driven by `social:` in _data/settings.yml so the header, footer
+and home page all stay in sync.
+{%- endcomment -%}
+<ul class="social-links {{ include.class }}">
+  {% for item in site.data.settings.social %}
+    <li>
+      <a href="{{ item.link }}"{% unless item.icon == 'email' %} target="_blank" rel="noopener"{% endunless %}>
+        {% include icon.html name=item.icon %}
+        <span{% if include.labels != true %} class="visually-hidden"{% endif %}>{{ item.name }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
