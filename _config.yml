@@ -1,13 +1,10 @@
 # Site Build Settings
 
-# jekyll-paginate configuration
-paginate:            5
-
 # Build settings
 markdown:            kramdown
 highlighter:         rouge
 permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jekyll-redirect-from]
+plugins:             [jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jekyll-redirect-from]
 
 # Site identity. `url` is what jekyll-seo-tag, jekyll-feed, and jekyll-sitemap
 # use for canonical URLs, feed entry links, and <loc> entries. `jekyll serve`

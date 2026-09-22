@@ -9,9 +9,6 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag",       "~> 2.8"
   gem "jekyll-sitemap",       "~> 1.4"
   gem "jekyll-redirect-from", "~> 0.16"
-  # Still required by _layouts/home.html; removed once the home page stops
-  # using the paginator.
-  gem "jekyll-paginate",      "~> 1.1"
 end
 
 group :development do
