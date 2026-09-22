@@ -4,6 +4,17 @@
 # Summaries are paraphrased from the papers' own abstracts -- no claims here
 # that Lorin has not already published. Worth her review all the same.
 
+- id: risk
+  title: "Risk-sensitive locomotion and navigation"
+  accent: green
+  status: "In preparation"
+  # needs_copy blocks the production build until a real summary is written.
+  # Lorin must supply this -- the work is not described anywhere in the repo
+  # and must not be paraphrased into existence.
+  needs_copy: true
+  summary:
+  publications: []
+
 - id: occupancy
   title: "Generative occupancy for exploration"
   summary: >-

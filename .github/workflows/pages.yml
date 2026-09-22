@@ -35,6 +35,11 @@ jobs:
           bundle exec htmlproofer ./_site
           --disable-external --allow-hash-href --enforce-https=false
 
+      # Only gates the deploy path; dev pushes may carry work in progress.
+      - name: Refuse to publish placeholder copy
+        if: github.ref == 'refs/heads/gh-pages' || github.base_ref == 'gh-pages'
+        run: ./script/check-ready
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

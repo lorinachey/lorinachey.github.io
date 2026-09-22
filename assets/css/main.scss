@@ -894,3 +894,40 @@ a.media-title:hover { color: var(--accent); }
   font-size: var(--step--1);
   font-variant-numeric: tabular-nums;
 }
+
+.thread--green {
+  --accent: #26703A;
+  --accent-quiet: #E6F4EA;
+}
+@media (prefers-color-scheme: dark) {
+  .thread--green {
+    --accent: #79D191;
+    --accent-quiet: #14301E;
+  }
+}
+
+.thread-status {
+  display: inline-block;
+  margin-left: var(--space-xs);
+  padding: 2px var(--space-xs);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+}
+
+/* Deliberately ugly: this must never be mistaken for finished copy. */
+.thread-todo {
+  max-width: var(--measure);
+  margin-bottom: var(--space-l);
+  padding: var(--space-s) var(--space-m);
+  border: 2px dashed var(--status-review);
+  border-radius: var(--radius);
+  color: var(--status-review);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+}
