@@ -7,11 +7,6 @@ layout: default
   <div class="lede">{{ content }}</div>
 </div>
 
-<section class="band band--flush">
-  <p class="eyebrow">How it works</p>
-  {% include explainer.html %}
-</section>
-
 {%- comment -%}
 Papers are grouped into threads so the page reads as a progression. Anything
 not listed in a thread still appears, under "Other work", so a new entry in
@@ -24,6 +19,9 @@ publications.yml can never silently vanish from the page.
     <div class="thread">
       <h2 class="thread-title">{{ thread.title }}</h2>
       <p class="thread-summary">{{ thread.summary }}</p>
+      {% if thread.diagram %}
+        {% include diagrams/{{ thread.diagram }}.html %}
+      {% endif %}
       <div class="pub-list">
         {% for pid in thread.publications %}
           {% assign pub = site.data.publications | where: "id", pid | first %}

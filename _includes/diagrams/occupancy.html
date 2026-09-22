@@ -1,9 +1,16 @@
 {%- comment -%}
-"How it works" diagram. Inline SVG so it inherits the theme through
-currentColor and CSS custom properties, and costs no extra request.
-Decorative detail is aria-hidden; the captions below carry the meaning.
+Diagram for the generative-occupancy thread. Rendered inside that thread via
+its `diagram:` key in _data/research_threads.yml, not at page level -- it
+explains this thread specifically and does not describe the other work.
+
+Inline SVG so it inherits the theme through CSS custom properties and costs no
+extra request. Decorative detail is aria-hidden; the captions carry the meaning.
 {%- endcomment -%}
 <figure class="explainer">
+  <figcaption class="explainer-caption">
+    <span class="explainer-kicker">How it works</span>
+    Predicting unobserved geometry, and planning with it.
+  </figcaption>
   <svg class="explainer-svg" viewBox="0 0 960 310" role="img"
        aria-label="A robot's partial observation is completed by a diffusion model into a full 3D scene, which lets it plan into space it has not yet seen.">
     <g aria-hidden="true">
