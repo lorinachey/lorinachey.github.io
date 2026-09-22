@@ -113,11 +113,11 @@ script/check-ready    Publish gate, run by CI on the deploy path only
 script/make-thumbs    Regenerates news thumbnails from post images
 ```
 
-**`README.md` and `LICENSE.md` are still the upstream Millennial theme's**, left
-over from before the redesign. No Millennial code remains in the site, so
-neither is accurate. Both are excluded from the published site, but the README
-is what anyone visiting the GitHub repo reads first. Replacing them is
-outstanding work, and the licence terms are Lorin's decision.
+`README.md` documents the repo for a human visitor; `LICENSE.md` splits terms —
+MIT for the code, all rights reserved for the writing and images. Both are
+excluded from the published site. Keep the split in mind when adding files:
+anything under `_posts/`, `pages/`, `_data/` or `assets/img/` is content, not
+MIT-licensed code.
 
 ## Content lives in data files, not markup
 
