@@ -954,3 +954,24 @@ html { scroll-behavior: smooth; }
 .availability ul { margin-bottom: var(--space-s); }
 .availability li { margin-bottom: var(--space-2xs); }
 .availability > p:last-child { margin-bottom: 0; font-size: var(--step--1); }
+
+/* A still image standing in for a thread's visual, matching the video card. */
+.thread-figure {
+  margin: 0 0 var(--space-l);
+  padding: var(--space-l);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.thread-figure img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: calc(var(--radius) - 2px);
+  background: var(--surface-sunk);
+}
+
+.thread-figure .media-caption {
+  margin: var(--space-s) 0 0;
+  font-size: var(--step--1);
+}

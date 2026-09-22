@@ -8,11 +8,18 @@
   title: "Risk-sensitive locomotion and navigation"
   accent: green
   status: "In preparation"
-  # needs_copy blocks the production build until a real summary is written.
-  # Lorin must supply this -- the work is not described anywhere in the repo
-  # and must not be paraphrased into existence.
-  needs_copy: true
-  summary:
+  image: risk-RL-work/spot-height-grid.jpg
+  image_alt: >-
+    A quadruped robot standing on simulated rough terrain, surrounded by a grid
+    of sampled height points
+  image_caption: "A quadruped sampling terrain height around it in simulation."
+  summary: >-
+    A quadruped crossing rough ground has to trade progress against the chance
+    of a fall, and an average-case policy hides exactly that trade-off. This
+    work uses distributional reinforcement learning, which models the whole
+    distribution of outcomes rather than just the expected return, to learn
+    navigation and locomotion policies for quadruped agents that account for
+    risk directly.
   publications: []
 
 - id: occupancy
