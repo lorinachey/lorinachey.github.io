@@ -49,27 +49,12 @@
   --space-xl:  3rem;
   --space-2xl: 4.5rem;
 
+  color-scheme: light dark;
+
   --measure: 68ch;
   --page-max: 1120px;
   --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);
   --radius: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink:           #E9EBEE;
-    --ink-muted:     #A2AAB3;
-    --ink-faint:     #7C858F;
-    --surface:       #14161A;
-    --surface-sunk:  #1C1F25;
-    --rule:          #2B3038;
-    --accent:        #6FC6D8;
-    --accent-quiet:  #16303A;
-
-    --status-published: #6FC6D8;
-    --status-review:    #D9A441;
-    --status-preprint:  #A2AAB3;
-  }
 }
 
 /* ----------------------------------------------------------------- base -- */
@@ -806,12 +791,6 @@ a.media-title:hover { color: var(--accent); }
   --accent: #574BC4;
   --accent-quiet: #ECEAFB;
 }
-@media (prefers-color-scheme: dark) {
-  .thread--violet {
-    --accent: #A79BFF;
-    --accent-quiet: #241F4A;
-  }
-}
 
 /* ---------------------------------------------------------- video embed -- */
 
@@ -854,12 +833,6 @@ a.media-title:hover { color: var(--accent); }
 .thread--green {
   --accent: #26703A;
   --accent-quiet: #E6F4EA;
-}
-@media (prefers-color-scheme: dark) {
-  .thread--green {
-    --accent: #79D191;
-    --accent-quiet: #14301E;
-  }
 }
 
 .thread-status {
@@ -974,4 +947,128 @@ html { scroll-behavior: smooth; }
 .thread-figure .media-caption {
   margin: var(--space-s) 0 0;
   font-size: var(--step--1);
+}
+
+/* ================================================================= THEME == */
+
+/*
+  Dark palette, defined once and applied through two mechanisms:
+
+    1. the OS preference, unless the visitor has explicitly chosen light
+    2. an explicit `data-theme="dark"` on <html>, which wins on any OS
+
+  Both are needed. Handling only the media query means a visitor who forces a
+  theme gets the wrong one; handling only the attribute drops automatic
+  support. The per-thread accents must go through BOTH paths too, or forcing a
+  theme leaves the thread rules out of step with the rest of the page.
+
+  The stored preference is applied pre-paint by the inline script in
+  _includes/head.html.
+*/
+
+@mixin theme-dark {
+  color-scheme: dark;
+
+  --ink:           #E9EBEE;
+  --ink-muted:     #A2AAB3;
+  --ink-faint:     #7C858F;
+  --surface:       #14161A;
+  --surface-sunk:  #1C1F25;
+  --rule:          #2B3038;
+  --accent:        #6FC6D8;
+  --accent-quiet:  #16303A;
+
+  --status-published: #6FC6D8;
+  --status-review:    #D9A441;
+  --status-preprint:  #A2AAB3;
+}
+
+@mixin thread-violet-dark {
+  --accent: #A79BFF;
+  --accent-quiet: #241F4A;
+}
+
+@mixin thread-green-dark {
+  --accent: #79D191;
+  --accent-quiet: #14301E;
+}
+
+/* 1. Follow the OS, unless the visitor has explicitly chosen light. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"])                 { @include theme-dark; }
+  :root:not([data-theme="light"]) .thread--violet { @include thread-violet-dark; }
+  :root:not([data-theme="light"]) .thread--green  { @include thread-green-dark; }
+}
+
+/* 2. An explicit dark choice wins on any OS. */
+:root[data-theme="dark"]                 { @include theme-dark; }
+:root[data-theme="dark"] .thread--violet { @include thread-violet-dark; }
+:root[data-theme="dark"] .thread--green  { @include thread-green-dark; }
+
+/* --------------------------------------------------------- theme toggle -- */
+
+/*
+  Rendered with `hidden` and unhidden by JS, so a visitor without JavaScript
+  never sees a control that cannot work. The site still follows their OS.
+*/
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--accent); }
+.theme-toggle .icon svg { width: 1.15em; height: 1.15em; }
+
+/*
+  Not optional: the UA's [hidden] { display: none } is the same specificity as
+  the .theme-toggle rule above, and an author sheet outranks the UA sheet. So
+  without this the button is visible before JS runs and takes a focus stop with
+  JS disabled -- the exact dead control `hidden` exists to prevent.
+*/
+.theme-toggle[hidden] { display: none; }
+
+/* One icon at a time, selected by the state the script writes on the button. */
+.theme-toggle .icon { display: none; }
+.theme-toggle:not([data-state]) [data-icon="system"],
+.theme-toggle[data-state="system"] [data-icon="system"],
+.theme-toggle[data-state="light"]  [data-icon="light"],
+.theme-toggle[data-state="dark"]   [data-icon="dark"] { display: inline-flex; }
+
+/* ----------------------------------------------------------------- print -- */
+
+/*
+  Paper is light. Browsers drop background colours when printing but keep text
+  colour, so a dark theme would print near-white text on white. Listing
+  :root[data-theme] alongside :root is load-bearing: it matches the
+  specificity of the explicit-override rule, which this must beat.
+*/
+@media print {
+  :root,
+  :root[data-theme] {
+    color-scheme: light;
+
+    --ink:           #15181D;
+    --ink-muted:     #5A6169;
+    --ink-faint:     #858D96;
+    --surface:       #FFFFFF;
+    --surface-sunk:  #FFFFFF;
+    --rule:          #CCCCCC;
+    --accent:        #0B6E7F;
+    --accent-quiet:  #FFFFFF;
+
+    --status-published: #0B6E7F;
+    --status-review:    #9A6508;
+    --status-preprint:  #5A6169;
+  }
+
+  .theme-toggle,
+  .skip-link { display: none !important; }
 }
