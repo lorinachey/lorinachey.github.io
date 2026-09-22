@@ -88,14 +88,18 @@ publications.yml can never silently vanish from the page.
   <p class="eyebrow">Projects</p>
   <div class="cards">
     {% for proj in site.data.projects %}
-      <article class="card">
-        <h3>{{ proj.title }}</h3>
-        <p>{{ proj.summary }}</p>
-        <ul class="pub-links">
-          {% for l in proj.links %}
-            <li><a href="{% if l.local %}{{ l.url | relative_url }}{% else %}{{ l.url }}{% endif %}"{% unless l.local %} target="_blank" rel="noopener"{% endunless %}>{{ l.type }}</a></li>
-          {% endfor %}
-        </ul>
+      <article class="card{% if proj.video %} card--media{% endif %}"
+               {% if proj.video %}data-video="{{ proj.video.id }}"{% endif %}>
+        {% if proj.video %}{% include video-poster.html video=proj.video %}{% endif %}
+        <div class="card-body">
+          <h3>{{ proj.title }}</h3>
+          <p>{{ proj.summary }}</p>
+          <ul class="pub-links">
+            {% for l in proj.links %}
+              <li><a href="{% if l.local %}{{ l.url | relative_url }}{% else %}{{ l.url }}{% endif %}"{% unless l.local %} target="_blank" rel="noopener"{% endunless %}>{{ l.type }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
       </article>
     {% endfor %}
   </div>

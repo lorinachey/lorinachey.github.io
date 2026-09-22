@@ -13,3 +13,18 @@
     large-model design.
   links:
     - {type: "GitHub", url: "https://github.com/lorinachey/vision-language-models/blob/main/paligemma-from-scratch.ipynb"}
+
+- title: "IsaacSim with Docker, ROS2 and Octomap"
+  summary: >-
+    A walkthrough of the simulation setup I use for research: NVIDIA IsaacSim
+    running in Docker alongside ROS2 and Octomap, with a companion repository
+    to clone and run.
+  video:
+    id: 9EkkdjW4N54
+    title: "How I use IsaacSim with Docker, ROS2 and Octomap for robotics PhD research"
+    image: talks/isaacsim-ros2-9EkkdjW4N54.jpg
+    image_alt: "Title frame of the IsaacSim, Docker and ROS2 tutorial video"
+    duration: "19:18"
+  links:
+    - {type: "Watch", url: "https://www.youtube.com/watch?v=9EkkdjW4N54"}
+    - {type: "GitHub", url: "https://github.com/CodeMechanicsLLC/isaacsim-ros2-docker"}

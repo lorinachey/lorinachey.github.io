@@ -1,7 +1,7 @@
 // Swaps a video poster for the real player on click. Progressive enhancement:
 // if this file never runs, the poster is still a working link to YouTube.
 (function () {
-  document.querySelectorAll('.video-embed').forEach(function (fig) {
+  document.querySelectorAll('[data-video]').forEach(function (fig) {
     var link = fig.querySelector('.video-facade');
     var id = fig.dataset.video;
     if (!link || !id) return;
