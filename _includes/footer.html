@@ -1,11 +1,6 @@
 <footer class="site-footer">
   <div class="site-footer-inner">
     <p class="footer-name">{{ site.title }}</p>
-    {% if site.data.settings.email %}
-      <p class="footer-contact">
-        <a href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
-      </p>
-    {% endif %}
     {% include social-links.html labels=true class="social-links--footer" %}
   </div>
 </footer>

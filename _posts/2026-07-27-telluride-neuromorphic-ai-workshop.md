@@ -2,7 +2,7 @@
 layout: post
 title: "Telluride Neuromorphic AI Workshop 2026"
 author: "Lorin Achey"
-categories: facts
+categories: news
 image: telluride-neuromorphic-ai-2026/award-ceremony-signal-2026-07-17-210228.jpeg
 ---
 

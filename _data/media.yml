@@ -1,0 +1,21 @@
+# Press and media coverage, newest first.
+#
+# NOTE: this list is what could be recovered from the repo. Lorin has more to
+# add -- outlet, date and URL for each. Do not invent entries.
+- title: "Best Robot Trainer Award and a KOTO-FM segment at the Telluride Neuromorphic AI Workshop"
+  outlet: "KOTO-FM, Telluride"
+  date: 2026-07-27
+  type: radio
+  post: 2026-07-27-telluride-neuromorphic-ai-workshop
+
+- title: "Achey earns Department of Defense NDSEG Fellowship"
+  outlet: "CU Boulder College of Engineering & Applied Science"
+  date: 2025-08-26
+  type: article
+  url: "https://www.colorado.edu/cs/achey-earns-department-defense-ndseg-fellowship"
+
+- title: "Diversity and Inclusion Fellow, Class of 2019"
+  outlet: "Georgia Tech College of Computing"
+  date: 2019-01-01
+  type: article
+  url: "https://www.cc.gatech.edu/news/shana-white-named-georgia-tech-diversity-and-inclusion-fellow-class-2019"

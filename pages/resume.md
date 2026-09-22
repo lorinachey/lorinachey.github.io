@@ -1,10 +1,8 @@
 ---
-layout: page
+layout: cv
 title: Resume
 category: resume
 permalink: /resume
----
-
 ---
 
 ## Awards & Accolades

@@ -2,7 +2,7 @@
 layout: post
 title: "About the Author"
 author: "Lorin Achey"
-categories: facts
+categories: news
 tags: [sample]
 image: lorin-cosmo-aspens.JPG
 ---

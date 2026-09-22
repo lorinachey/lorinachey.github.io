@@ -2,7 +2,7 @@
 layout: post
 title: "Can Generative AI deliver for Robotics?"
 author: "Lorin Achey"
-categories: facts
+categories: news
 tags: [gen-ai]
 image: scene-sense-diffusion-models.PNG
 ---

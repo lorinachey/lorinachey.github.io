@@ -334,12 +334,7 @@ th { font-family: var(--font-mono); font-size: var(--step--1); text-transform: u
   margin: 0;
 }
 
-.footer-contact { margin: 0; margin-right: auto; }
-.footer-contact a { color: var(--ink-muted); }
-
-@media (max-width: 640px) {
-  .footer-contact { margin-right: 0; width: 100%; }
-}
+.footer-name { margin-right: auto; }
 
 /* Respect a reduced-motion preference for any autoplaying clip. */
 @media (prefers-reduced-motion: reduce) {
@@ -575,3 +570,111 @@ th { font-family: var(--font-mono); font-size: var(--step--1); text-transform: u
   .pub { grid-template-columns: 1fr; }
   .pub-figure { aspect-ratio: 16 / 9; }
 }
+
+/* ------------------------------------------------- research / news pages -- */
+
+/* Bands that follow a padded page column shouldn't double up the gutter. */
+.band--flush { margin-top: var(--space-xl); }
+
+.lede p { font-size: var(--step-1); line-height: 1.55; color: var(--ink-muted); }
+.lede p:first-child { color: var(--ink); font-family: var(--font-serif); }
+
+.page-content--spaced { margin-top: var(--space-2xl); }
+
+.plain-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-m); }
+.plain-item {
+  padding: var(--space-m);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.plain-item h3 { margin: 0 0 var(--space-2xs); font-size: var(--step-1); }
+
+/* ----------------------------------------------------------- media list -- */
+
+.media-list { list-style: none; margin: 0; padding: 0; }
+
+.media-item { padding: var(--space-m) 0; border-bottom: 1px solid var(--rule); }
+.media-item:first-child { padding-top: 0; }
+
+.media-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-s);
+  margin: 0 0 var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+}
+
+.media-type {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1px var(--space-xs);
+  border-radius: 3px;
+  background: var(--accent-quiet);
+  color: var(--accent);
+}
+
+.media-title {
+  font-family: var(--font-serif);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  line-height: 1.3;
+}
+a.media-title:hover { color: var(--accent); }
+
+/* ------------------------------------------------------------------- CV -- */
+
+.cv { max-width: 76ch; }
+
+.cv-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-m);
+  margin-bottom: var(--space-l);
+}
+.cv-head h1 { margin: 0; }
+
+.btn--download {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--surface);
+  font-weight: 600;
+}
+.btn--download:hover { background: var(--ink); border-color: var(--ink); }
+
+/* Section headings become ruled bands so the page scans as a document rather
+   than an undifferentiated wall of bullets. */
+.cv-body h2 {
+  margin-top: var(--space-2xl);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--accent);
+  font-size: var(--step-2);
+}
+.cv-body h2:first-child { margin-top: 0; }
+
+.cv-body h3 {
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-2xs);
+  font-size: var(--step-1);
+}
+
+/* Role / employer lines sit directly under a heading as bold-led paragraphs. */
+.cv-body h3 + p { margin-bottom: var(--space-xs); color: var(--ink-muted); }
+
+.cv-body ul { padding-left: 1.1rem; }
+.cv-body li { margin-bottom: var(--space-xs); }
+.cv-body li::marker { color: var(--accent); }
+
+.cv-body hr { margin: var(--space-l) 0; }
+
+/* The resume leans on trailing-backslash line breaks for dates and skill
+   groups; give those a touch more air. */
+.cv-body p { margin-bottom: var(--space-s); }
