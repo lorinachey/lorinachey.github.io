@@ -1,29 +1,66 @@
 ---
 ---
 
-$base-font-family: 'Roboto', sans-serif;
-$body-font-family: 'Roboto', sans-serif;
-$code-font-family: "Source Code Pro", monospace;
+/*
+  Interim stylesheet.
 
-$brand-color: black;
+  The Millennial theme's stylesheets have been removed. This is a minimal
+  reset plus the design tokens the new system will build on, so the site stays
+  readable and navigable while the real design lands.
+*/
 
-$container-width: 1100px;
-$tablet-width: 600px;
-$phone-width: 480px;
+:root {
+  --ink:          #15181D;
+  --ink-muted:    #5A6169;
+  --surface:      #FFFFFF;
+  --surface-sunk: #F5F6F8;
+  --rule:         #E3E6EA;
+  --accent:       #0B6E7F;
 
-$header-thickness: 56px;
+  --measure: 68ch;
+  --gutter:  1.25rem;
+}
 
-$icon-transition-time: 1.0s;
-$envelope-color: #f39c12;
-$twitter-color: #00aced;
-$instagram-color: #375989;
-$github-color: #343434;
-$linkedin-color: #0073a4;
-$facebook-color: #3d5b99;
-$google-color: #e64a41;
-$pinterest-color: #bd081c;
-$medium-color: #00AB6C;
-$codepen-color: black;
-$rss-color: #ff6600;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:          #EDEEF0;
+    --ink-muted:    #A2AAB3;
+    --surface:      #14161A;
+    --surface-sunk: #1C1F25;
+    --rule:         #2B3038;
+    --accent:       #5FBDD0;
+  }
+}
 
-@import "-sections-dir";
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 var(--gutter);
+  background: var(--surface);
+  color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.container { max-width: var(--measure); margin: 0 auto; }
+
+a { color: var(--accent); }
+
+img { max-width: 100%; height: auto; }
+
+.site-header,
+.site-footer {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.site-footer { border-bottom: 0; border-top: 1px solid var(--rule); }
+
+.menu-link { margin-right: 0.75rem; }
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list-item { margin: 0 0 0.75rem; }
+.post-list-item time { display: block; color: var(--ink-muted); font-size: 0.875rem; }
+
+/* The theme's hamburger was hover-only and broken on touch; it is gone until
+   the new nav replaces it. */
+.dropdown { display: none; }
