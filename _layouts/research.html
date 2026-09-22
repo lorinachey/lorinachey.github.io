@@ -7,13 +7,47 @@ layout: default
   <div class="lede">{{ content }}</div>
 </div>
 
+<section class="band band--flush">
+  <p class="eyebrow">How it works</p>
+  {% include explainer.html %}
+</section>
+
+{%- comment -%}
+Papers are grouped into threads so the page reads as a progression. Anything
+not listed in a thread still appears, under "Other work", so a new entry in
+publications.yml can never silently vanish from the page.
+{%- endcomment -%}
 <section class="band band--sunk band--flush">
-  <p class="eyebrow">Publications</p>
-  <div class="pub-list">
-    {% for pub in site.data.publications %}
-      {% include publication.html pub=pub %}
-    {% endfor %}
-  </div>
+  <p class="eyebrow">Research threads</p>
+  {% assign grouped = "" | split: "" %}
+  {% for thread in site.data.research_threads %}
+    <div class="thread">
+      <h2 class="thread-title">{{ thread.title }}</h2>
+      <p class="thread-summary">{{ thread.summary }}</p>
+      <div class="pub-list">
+        {% for pid in thread.publications %}
+          {% assign pub = site.data.publications | where: "id", pid | first %}
+          {% if pub %}
+            {% include publication.html pub=pub %}
+            {% assign grouped = grouped | push: pid %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+
+  {% assign ungrouped = "" | split: "" %}
+  {% for pub in site.data.publications %}
+    {% unless grouped contains pub.id %}{% assign ungrouped = ungrouped | push: pub %}{% endunless %}
+  {% endfor %}
+  {% if ungrouped.size > 0 %}
+    <div class="thread">
+      <h2 class="thread-title">Other work</h2>
+      <div class="pub-list">
+        {% for pub in ungrouped %}{% include publication.html pub=pub %}{% endfor %}
+      </div>
+    </div>
+  {% endif %}
 </section>
 
 <section class="band band--flush">

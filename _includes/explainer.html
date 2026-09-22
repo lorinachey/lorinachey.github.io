@@ -1,0 +1,99 @@
+{%- comment -%}
+"How it works" diagram. Inline SVG so it inherits the theme through
+currentColor and CSS custom properties, and costs no extra request.
+Decorative detail is aria-hidden; the captions below carry the meaning.
+{%- endcomment -%}
+<figure class="explainer">
+  <svg class="explainer-svg" viewBox="0 0 960 310" role="img"
+       aria-label="A robot's partial observation is completed by a diffusion model into a full 3D scene, which lets it plan into space it has not yet seen.">
+    <g aria-hidden="true">
+      <!-- Stage 1: partial observation. Solid cells observed, outlined unknown. -->
+      <g transform="translate(40,70)">
+        <rect class="ex-frame" x="0" y="0" width="180" height="130" rx="6"/>
+        <g class="ex-observed">
+          <rect x="22"  y="22" width="26" height="26" rx="2"/>
+          <rect x="54"  y="22" width="26" height="26" rx="2"/>
+          <rect x="22"  y="54" width="26" height="26" rx="2"/>
+          <rect x="54"  y="54" width="26" height="26" rx="2"/>
+          <rect x="22"  y="86" width="26" height="26" rx="2"/>
+        </g>
+        <g class="ex-unknown">
+          <rect x="86"  y="22" width="26" height="26" rx="2"/>
+          <rect x="118" y="22" width="26" height="26" rx="2"/>
+          <rect x="86"  y="54" width="26" height="26" rx="2"/>
+          <rect x="118" y="54" width="26" height="26" rx="2"/>
+          <rect x="54"  y="86" width="26" height="26" rx="2"/>
+          <rect x="86"  y="86" width="26" height="26" rx="2"/>
+          <rect x="118" y="86" width="26" height="26" rx="2"/>
+        </g>
+      </g>
+
+      <path class="ex-arrow" d="M238 135 h58" marker-end="url(#ex-head)"/>
+
+      <!-- Stage 2: the model, drawn as denoising bands. -->
+      <g transform="translate(314,70)">
+        <rect class="ex-frame ex-frame--accent" x="0" y="0" width="180" height="130" rx="6"/>
+        <g class="ex-wave">
+          <path d="M22 44 q22 -18 44 0 t44 0 t44 0"/>
+          <path d="M22 66 q22 -14 44 0 t44 0 t44 0"/>
+          <path d="M22 88 q22 -9 44 0 t44 0 t44 0"/>
+        </g>
+      </g>
+
+      <path class="ex-arrow" d="M512 135 h58" marker-end="url(#ex-head)"/>
+
+      <!-- Stage 3: completed scene. Predicted cells fill the gaps. -->
+      <g transform="translate(588,70)">
+        <rect class="ex-frame" x="0" y="0" width="180" height="130" rx="6"/>
+        <g class="ex-observed">
+          <rect x="22"  y="22" width="26" height="26" rx="2"/>
+          <rect x="54"  y="22" width="26" height="26" rx="2"/>
+          <rect x="22"  y="54" width="26" height="26" rx="2"/>
+          <rect x="54"  y="54" width="26" height="26" rx="2"/>
+          <rect x="22"  y="86" width="26" height="26" rx="2"/>
+        </g>
+        <g class="ex-predicted">
+          <rect x="86"  y="22" width="26" height="26" rx="2"/>
+          <rect x="118" y="22" width="26" height="26" rx="2"/>
+          <rect x="86"  y="54" width="26" height="26" rx="2"/>
+          <rect x="118" y="54" width="26" height="26" rx="2"/>
+          <rect x="54"  y="86" width="26" height="26" rx="2"/>
+          <rect x="86"  y="86" width="26" height="26" rx="2"/>
+          <rect x="118" y="86" width="26" height="26" rx="2"/>
+        </g>
+      </g>
+
+      <!-- Outcome, hanging off the completed scene. -->
+      <path class="ex-arrow ex-arrow--down" d="M678 208 v28" marker-end="url(#ex-head)"/>
+      <g transform="translate(520,242)">
+        <rect class="ex-outcome" x="0" y="0" width="316" height="44" rx="22"/>
+        <text class="ex-outcome-text" x="158" y="28" text-anchor="middle">keep exploring, don't stop to look</text>
+      </g>
+
+      <defs>
+        <marker id="ex-head" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" class="ex-arrowhead"/>
+        </marker>
+      </defs>
+    </g>
+  </svg>
+
+  <ol class="explainer-steps">
+    <li>
+      <span class="explainer-step">Observed</span>
+      A robot measures only what its sensors can see. Turning a corner leaves
+      most of the space unknown.
+    </li>
+    <li>
+      <span class="explainer-step">Predicted</span>
+      A diffusion model fills in the geometry that has not been observed,
+      without overwriting anything actually measured.
+    </li>
+    <li>
+      <span class="explainer-step">Acted on</span>
+      The completed map is fused live, so the robot keeps planning into space
+      it has not reached yet instead of stopping to look.
+    </li>
+  </ol>
+</figure>

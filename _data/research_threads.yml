@@ -1,0 +1,25 @@
+# Research threads. Papers are grouped and ordered oldest-first within a thread
+# so the page reads as a progression rather than a list.
+#
+# Summaries are paraphrased from the papers' own abstracts -- no claims here
+# that Lorin has not already published. Worth her review all the same.
+
+- id: occupancy
+  title: "Generative occupancy for exploration"
+  summary: >-
+    Robots normally plan only over geometry they have directly measured, so
+    they stall when they turn a corner or enter a new room. This thread trains
+    diffusion models to predict the geometry that has not been seen yet, fuses
+    those predictions into a live occupancy map without ever overwriting
+    observed space, and uses the result to keep exploring instead of pausing.
+  publications: [scenesense, online-diffusion, robust-exploration]
+
+- id: multiagent
+  title: "Coordination under limited communication"
+  summary: >-
+    When a team of robots explores somewhere the radio does not reach, the
+    hard problem stops being perception and becomes deciding where and when to
+    transmit. This work plans transmission locations from signal strength and
+    payload size, so agents share what they have found without backtracking to
+    meet.
+  publications: [rf-multiagent]

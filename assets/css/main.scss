@@ -724,3 +724,93 @@ a.media-title:hover { color: var(--accent); }
 @media (max-width: 720px) {
   .talk { grid-template-columns: 1fr; }
 }
+
+/* ------------------------------------------------------------ explainer -- */
+
+.explainer { margin: 0; max-width: var(--page-max); margin-inline: auto; }
+
+.explainer-svg {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  margin: 0 auto var(--space-l);
+  display: block;
+  overflow: visible;
+}
+
+.ex-frame { fill: var(--surface); stroke: var(--rule); stroke-width: 1.5; }
+.ex-frame--accent { stroke: var(--accent); }
+
+.ex-observed rect  { fill: var(--accent); }
+.ex-unknown  rect  { fill: none; stroke: var(--rule); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.ex-predicted rect { fill: var(--accent); opacity: 0.32; }
+
+.ex-wave path { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0.75; }
+.ex-wave path:nth-child(2) { opacity: 0.5; }
+.ex-wave path:nth-child(3) { opacity: 0.3; }
+
+.ex-arrow { fill: none; stroke: var(--ink-faint); stroke-width: 2; }
+
+.ex-outcome { fill: var(--accent-quiet); stroke: var(--accent); stroke-width: 1.5; }
+.ex-outcome-text {
+  fill: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 15px;
+}
+.ex-arrowhead { fill: var(--ink-faint); }
+
+.explainer-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  color: var(--ink-muted);
+}
+.explainer-steps li { margin: 0; }
+
+.explainer-step {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: var(--space-2xs);
+}
+
+/* On a phone the three stages are unreadable side by side; the captions below
+   carry the explanation, so the diagram scrolls rather than shrinking. */
+@media (max-width: 640px) {
+  .explainer-svg { min-width: 560px; }
+  .explainer > .explainer-svg { max-width: none; }
+  .explainer { overflow-x: auto; }
+  .explainer-steps { min-width: 0; }
+}
+
+/* -------------------------------------------------------------- threads -- */
+
+.thread { max-width: var(--page-max); margin-inline: auto; }
+.thread + .thread { margin-top: var(--space-2xl); }
+
+.thread-title {
+  margin: 0 0 var(--space-xs);
+  font-size: var(--step-2);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--accent);
+}
+
+.thread-summary {
+  max-width: var(--measure);
+  color: var(--ink-muted);
+  margin-bottom: var(--space-l);
+}
+
+.pub-highlight {
+  margin: var(--space-xs) 0 0;
+  padding-left: var(--space-s);
+  border-left: 3px solid var(--accent);
+  color: var(--ink);
+  font-size: var(--step--1);
+}
