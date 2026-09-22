@@ -29,7 +29,11 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Check internal links and images
-        run: bundle exec htmlproofer ./_site --disable-external --allow-hash-href
+        # enforce-https is off: the Georgia Tech SSDL page linked from a post
+        # is http-only, so requiring https would break a working link.
+        run: >-
+          bundle exec htmlproofer ./_site
+          --disable-external --allow-hash-href --enforce-https=false
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
