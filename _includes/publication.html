@@ -1,0 +1,36 @@
+{%- comment -%}
+One publication entry. Used on the home page (selected only) and on the
+research page. Usage: {% include publication.html pub=item %}
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+<article class="pub">
+  {% if pub.image %}
+    <div class="pub-figure">
+      <img src="{{ pub.image | prepend: '/assets/img/' | relative_url }}"
+           alt="{{ pub.image_alt | default: pub.title }}" loading="lazy">
+    </div>
+  {% endif %}
+  <div class="pub-body">
+    <p class="pub-badge pub-badge--{{ pub.status }}">
+      <span>{{ pub.venue }}</span><span class="pub-year">{{ pub.year }}</span>
+    </p>
+    <h3 class="pub-title">{{ pub.title }}</h3>
+    {%- comment -%}
+      Author lists are not in the repo yet; the line is omitted entirely rather
+      than rendered empty or guessed at.
+    {%- endcomment -%}
+    {% if pub.authors and pub.authors != empty %}
+      <p class="pub-authors">
+        {% for a in pub.authors %}{% if a == site.author %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+      </p>
+    {% endif %}
+    {% if pub.venue_full and pub.venue_full != pub.venue %}
+      <p class="pub-venue">{{ pub.venue_full }}</p>
+    {% endif %}
+    <ul class="pub-links">
+      {% for l in pub.links %}
+        <li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.type }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>

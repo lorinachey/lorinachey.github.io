@@ -2,3 +2,73 @@
 layout: home
 title: Home
 ---
+
+<section class="hero">
+  <div class="hero-media">
+    {%- comment -%}
+      PLACEHOLDER. Generated isometric occupancy grid standing in for a real
+      render or looping clip of Lorin's work. Swap this for the real asset.
+    {%- endcomment -%}
+    <img src="{{ '/assets/img/generated/hero-occupancy-placeholder.svg' | relative_url }}"
+         alt="Stylised occupancy grid: observed cells fading into predicted cells">
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">PhD Candidate &middot; CU Boulder</p>
+    <h1 class="hero-name">Lorin Achey</h1>
+    <p class="hero-lede">
+      I build perception systems for autonomous vehicles and mobile robots &mdash;
+      teaching machines to see, predict, and act in environments they have only
+      partly observed.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn--primary" href="{{ '/research' | relative_url }}">See the research</a>
+      <a class="btn" href="{{ '/resume' | relative_url }}">CV</a>
+    </div>
+    {% include social-links.html labels=true class="social-links--hero" %}
+  </div>
+</section>
+
+<section class="band">
+  <p class="eyebrow">Research directions</p>
+  <div class="cards">
+    <article class="card">
+      <h3>Generative occupancy &amp; world models</h3>
+      <p>Diffusion models that complete a 3D scene from partial observation, so a
+         robot can plan against what is probably there rather than only what it
+         has already seen.</p>
+    </article>
+    <article class="card">
+      <h3>Multi-modal 3D perception</h3>
+      <p>Fusing RGB-D, LiDAR, and RF signals into scene understanding that holds
+         up in the cluttered, egocentric, partly-observed conditions real robots
+         actually operate in.</p>
+    </article>
+    <article class="card">
+      <h3>Vision–Language–Action models</h3>
+      <p>Unifying perception, language, and control so that grounded instructions
+         become safe, explainable decisions on a real platform.</p>
+    </article>
+  </div>
+</section>
+
+<section class="band band--sunk">
+  <div class="band-head">
+    <p class="eyebrow">Selected publications</p>
+    <a class="band-more" href="{{ '/research' | relative_url }}">All publications &rarr;</a>
+  </div>
+  <div class="pub-list">
+    {% for pub in site.data.publications %}
+      {% if pub.selected %}{% include publication.html pub=pub %}{% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="band-head">
+    <p class="eyebrow">Recent news</p>
+    <a class="band-more" href="{{ '/facts' | relative_url }}">All news &rarr;</a>
+  </div>
+  {% assign recent = site.posts | slice: 0, 3 %}
+  {% include post-list.html posts=recent %}
+</section>
