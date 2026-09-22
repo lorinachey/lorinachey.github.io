@@ -5,13 +5,7 @@ permalink: /research
 has_video: true
 ---
 
-I build perception systems for autonomous vehicles and mobile robots, with an
-emphasis on AI and machine learning that is robust, explainable, and safe.
-
-My recent work explores generative 3D world models — specifically
-diffusion-based occupancy prediction for exploration, mapping, and long-horizon
-planning. I develop algorithms and models that let mobile robots perceive,
-predict, and act in complex, partially observed, egocentric environments. The
-work spans multi-modal machine perception for 3D scene understanding,
-generative occupancy modeling, and Vision–Language–Action (VLA) models that
-unify perception, language, and control for grounded decision-making.
+I work on perception for autonomous vehicles and mobile robots — mostly on
+models that predict the parts of a scene a robot hasn't seen yet, and on using
+those predictions to keep it moving. My current work extends this to
+risk-conditioned locomotion and navigation.
