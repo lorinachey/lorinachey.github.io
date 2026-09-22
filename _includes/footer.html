@@ -1,6 +1,11 @@
-<footer class="footer">
-  {% for item in site.data.settings.social %}
-    <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
-  {% endfor %}
-  <div class="footer-description"><a href="{{ '/' | relative_url }}">{{ site.title }} | {{ site.description }}</a></div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="footer-name">{{ site.title }}</p>
+    {% if site.data.settings.email %}
+      <p class="footer-contact">
+        <a href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
+      </p>
+    {% endif %}
+    {% include social-links.html labels=true class="social-links--footer" %}
+  </div>
 </footer>
