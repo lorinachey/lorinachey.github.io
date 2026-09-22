@@ -348,3 +348,230 @@ th { font-family: var(--font-mono); font-size: var(--step--1); text-transform: u
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ================================================================ SHOWCASE == */
+
+/* The home page runs full-bleed, so it opts out of the padded main column. */
+.site-main:has(> .hero) { max-width: none; padding: 0; }
+
+/* ----------------------------------------------------------------- hero -- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+  min-height: min(82vh, 760px);
+  padding: var(--space-2xl) var(--gutter) var(--space-xl);
+  background: #090D14;
+  overflow: hidden;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 32%;
+}
+/* Keeps the display type legible over the graphic at every viewport. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top,   rgba(9,13,20,0.97) 12%, rgba(9,13,20,0.55) 48%, rgba(9,13,20,0.15) 78%),
+    linear-gradient(to right, rgba(9,13,20,0.9) 0%,  rgba(9,13,20,0) 62%);
+}
+
+.hero-content {
+  max-width: var(--page-max);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #6FC6D8;
+  margin: 0 0 var(--space-s);
+}
+
+.hero-name {
+  font-size: clamp(3rem, 1.6rem + 6.4vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 var(--space-m);
+}
+
+.hero-lede {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  line-height: 1.4;
+  color: #D6DCE3;
+  max-width: 34ch;
+  margin: 0 0 var(--space-l);
+  text-wrap: pretty;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-bottom: var(--space-m);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 var(--space-m);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 999px;
+  color: #FFFFFF;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { background: rgba(255,255,255,0.12); border-color: #FFFFFF; }
+
+.btn--primary {
+  background: #3FD8C2;
+  border-color: #3FD8C2;
+  color: #06231F;
+  font-weight: 600;
+}
+.btn--primary:hover { background: #6FE6D4; border-color: #6FE6D4; }
+
+.social-links--hero a { color: #B9C3CC; }
+.social-links--hero a:hover { color: #FFFFFF; }
+
+/* ---------------------------------------------------------------- bands -- */
+
+.band {
+  padding: var(--space-2xl) var(--gutter);
+}
+.band > *,
+.band-head { max-width: var(--page-max); margin-inline: auto; }
+
+.band--sunk {
+  background: var(--surface-sunk);
+  border-block: 1px solid var(--rule);
+}
+
+.band-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-s);
+  margin-bottom: var(--space-l);
+}
+.band-head .eyebrow { margin: 0; }
+.band-more { font-family: var(--font-mono); font-size: var(--step--1); text-decoration: none; }
+.band-more:hover { text-decoration: underline; }
+
+/* ---------------------------------------------------------------- cards -- */
+
+.cards {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+
+.card {
+  padding: var(--space-l);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  border-top: 3px solid var(--accent);
+}
+.card h3 { margin-top: 0; }
+.card p { margin-bottom: 0; color: var(--ink-muted); }
+
+/* --------------------------------------------------- publication cards -- */
+
+.pub-list { display: grid; gap: var(--space-m); max-width: var(--page-max); margin-inline: auto; }
+
+.pub {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-m);
+  align-items: start;
+  padding: var(--space-m);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.pub:not(:has(.pub-figure)) { grid-template-columns: 1fr; }
+
+.pub-figure {
+  border-radius: calc(var(--radius) - 2px);
+  overflow: hidden;
+  background: var(--surface-sunk);
+  aspect-ratio: 16 / 10;
+}
+.pub-figure img { width: 100%; height: 100%; object-fit: cover; }
+
+.pub-badge {
+  display: inline-flex;
+  align-items: stretch;
+  margin: 0 0 var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  overflow: hidden;
+  color: var(--status-preprint);
+}
+.pub-badge span { padding: 2px var(--space-xs); white-space: nowrap; }
+/* The year sits on a solid fill. This uses --badge rather than currentColor:
+   currentColor would resolve to the element's own overridden color, painting
+   the fill in the page background and hiding the year. */
+.pub-badge .pub-year {
+  background: var(--badge);
+  color: var(--surface);
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-badge--published { --badge: var(--status-published); color: var(--badge); }
+.pub-badge--in-review { --badge: var(--status-review);    color: var(--badge); }
+.pub-badge--preprint  { --badge: var(--status-preprint);  color: var(--badge); }
+.pub-badge--accepted  { --badge: var(--status-published); color: var(--badge); }
+
+.pub-title {
+  font-size: var(--step-1);
+  margin: 0 0 var(--space-2xs);
+  line-height: 1.25;
+}
+.pub-authors, .pub-venue { margin: 0 0 var(--space-2xs); color: var(--ink-muted); font-size: var(--step--1); }
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-m);
+  list-style: none;
+  margin: var(--space-xs) 0 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+}
+.pub-links a { text-decoration: none; }
+.pub-links a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  /* Thumbnail goes full-width above the metadata rather than squeezing beside it. */
+  .pub { grid-template-columns: 1fr; }
+  .pub-figure { aspect-ratio: 16 / 9; }
+}

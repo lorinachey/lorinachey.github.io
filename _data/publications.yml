@@ -1,0 +1,63 @@
+# Publications, newest first. Authored in display order — do not sort in Liquid.
+#
+# NOTE: `authors` is deliberately empty on every entry. Coauthor lists are not
+# recorded anywhere in this repo and must come from Lorin; the card renders no
+# author line at all until they are filled in. Do not guess them.
+#
+# status: published | accepted | in-review | preprint   (drives the badge colour)
+# selected: true     surfaces the entry on the home page
+
+- id: rf-multiagent
+  title: "RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration"
+  authors: []
+  venue: "In review"
+  venue_full: "In review"
+  year: 2026
+  status: in-review
+  selected: true
+  theme: exploration
+  links:
+    - {type: "arXiv", url: "https://arxiv.org/abs/2602.12074"}
+
+- id: robust-exploration
+  title: "Robust Robotic Exploration and Mapping Using Generative Occupancy Map Synthesis"
+  authors: []
+  venue: "Autonomous Robots"
+  venue_full: "Autonomous Robots (Springer)"
+  year: 2026
+  status: published
+  selected: true
+  theme: exploration
+  links:
+    - {type: "Journal", url: "https://link.springer.com/article/10.1007/s10514-025-10229-0"}
+    - {type: "arXiv", url: "https://arxiv.org/abs/2506.20049"}
+
+- id: online-diffusion
+  title: "Online Diffusion-Based 3D Occupancy Prediction at the Frontier with Probabilistic Map Reconciliation"
+  authors: []
+  venue: "ICRA"
+  venue_full: "IEEE International Conference on Robotics and Automation (ICRA)"
+  year: 2025
+  status: published
+  selected: true
+  theme: occupancy
+  image: scene-sense-diffusion-models.PNG
+  image_alt: "Diffusion pipeline predicting 3D occupancy at the exploration frontier"
+  links:
+    - {type: "IEEE Xplore", url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11128832"}
+    - {type: "arXiv", url: "https://arxiv.org/abs/2409.10681"}
+    - {type: "Project page", url: "https://arpg.github.io/scenesense/"}
+
+- id: scenesense
+  title: "SceneSense: Diffusion Models for 3D Occupancy Synthesis from Partial Observation"
+  authors: []
+  venue: "IROS"
+  venue_full: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  year: 2024
+  status: published
+  selected: false
+  theme: occupancy
+  links:
+    - {type: "IEEE Xplore", url: "https://ieeexplore.ieee.org/document/10802589"}
+    - {type: "arXiv", url: "https://arxiv.org/abs/2403.11985"}
+    - {type: "Project page", url: "https://arpg.github.io/scenesense/"}
