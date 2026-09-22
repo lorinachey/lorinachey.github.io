@@ -10,5 +10,22 @@
       {% endfor %}
     </nav>
     {% include social-links.html class="social-links--header" %}
+
+    {%- comment -%}
+      Cycles system -> light -> dark. Rendered hidden and unhidden by JS, so it
+      never appears as a dead control without JavaScript. The label and icon
+      are filled in by assets/js/theme-toggle.js.
+    {%- endcomment -%}
+    <button class="theme-toggle" type="button" id="theme-toggle" hidden
+            aria-label="Theme: match system">
+      <span class="icon" data-icon="system" aria-hidden="true">{% include icons/theme-auto.svg %}</span>
+      <span class="icon" data-icon="light"  aria-hidden="true">{% include icons/sun.svg %}</span>
+      <span class="icon" data-icon="dark"   aria-hidden="true">{% include icons/moon.svg %}</span>
+    </button>
+    {%- comment -%}
+      Announces the new state on change. Must exist in the DOM at load for
+      assistive tech to register it, so it is server-rendered and empty.
+    {%- endcomment -%}
+    <span class="visually-hidden" id="theme-status" role="status"></span>
   </div>
 </header>
