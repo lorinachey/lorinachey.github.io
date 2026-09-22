@@ -16,9 +16,7 @@
     A quadruped sampling terrain around it in simulation while training with
     distributional reinforcement learning.
   summary: >-
-    A quadruped crossing rough ground has to trade progress against the chance
-    of a fall, and an average-case policy hides exactly that trade-off. This
-    work uses distributional reinforcement learning, which models the whole
+    This work uses distributional reinforcement learning, which models the whole
     distribution of outcomes rather than just the expected return, to learn
     navigation and locomotion policies for quadruped agents that account for
     risk directly.
