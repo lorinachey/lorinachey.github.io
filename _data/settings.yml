@@ -4,14 +4,14 @@ email: lorin.achey@colorado.edu
 menu:
 - {name: 'Research',  url: 'research'}
 - {name: 'CV',        url: 'resume'}
-- {name: 'News',      url: 'facts'}
+- {name: 'News',      url: 'news'}
 - {name: 'About',     url: 'about'}
 - {name: 'Contact',   url: 'contact'}
 
 # Profile links. `icon` maps to a file in _includes/icons/.
-# NOTE: YouTube is intentionally absent until Lorin supplies the channel URL.
 social:
 - {name: 'Google Scholar', icon: 'scholar',  link: 'https://scholar.google.com/citations?user=X2arWTUAAAAJ&hl=en'}
+- {name: 'YouTube',        icon: 'youtube',  link: 'https://www.youtube.com/@CodeMechanicsPhD'}
 - {name: 'GitHub',         icon: 'github',   link: 'https://github.com/lorinachey'}
 - {name: 'LinkedIn',       icon: 'linkedin', link: 'https://linkedin.com/in/lorinachey'}
 - {name: 'Email',          icon: 'email',    link: 'mailto:lorin.achey@colorado.edu'}

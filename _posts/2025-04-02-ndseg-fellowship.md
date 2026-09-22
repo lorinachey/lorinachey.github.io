@@ -2,7 +2,7 @@
 layout: post
 title: "I'm an NDSEG Fellow!"
 author: "Lorin Achey"
-categories: facts
+categories: news
 image: ndseg-fellowship.png
 ---
 

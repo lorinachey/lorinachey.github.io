@@ -1,0 +1,23 @@
+{%- comment -%}
+Press and media coverage. Entries link out to the outlet, or to a post on this
+site when the coverage is written up here.
+{%- endcomment -%}
+<ul class="media-list">
+  {% for item in include.items %}
+    <li class="media-item">
+      <p class="media-meta">
+        <span class="media-type media-type--{{ item.type }}">{{ item.type }}</span>
+        <span class="media-outlet">{{ item.outlet }}</span>
+        {% if item.date %}<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%B %Y" }}</time>{% endif %}
+      </p>
+      {% if item.url %}
+        <a class="media-title" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+      {% elsif item.post %}
+        {% assign p = site.posts | where_exp: "x", "x.path contains item.post" | first %}
+        <a class="media-title" href="{{ p.url | relative_url }}">{{ item.title }}</a>
+      {% else %}
+        <span class="media-title">{{ item.title }}</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
