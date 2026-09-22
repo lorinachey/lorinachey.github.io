@@ -8,10 +8,10 @@
         {% else %}
           <li>
             <h3>
-              <a href="{{ site.github.url }}{{ mypost.url }}">
+              <a href="{{ mypost.url | relative_url }}">
                 <div class="related-thumbnail">
                   {% if mypost.image %}
-                    <img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ mypost.image }}" alt="{{ mypost.image_alt | default: mypost.title }}">
+                    <img src="{{ mypost.image | prepend: '/assets/img/' | relative_url }}" alt="{{ mypost.image_alt | default: mypost.title }}">
                   {% endif %}
                 </div>
                 <div class="related-title">
