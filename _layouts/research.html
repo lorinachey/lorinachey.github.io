@@ -16,7 +16,7 @@ publications.yml can never silently vanish from the page.
   <p class="eyebrow">Research threads</p>
   {% assign grouped = "" | split: "" %}
   {% for thread in site.data.research_threads %}
-    <div class="thread">
+    <div class="thread{% if thread.accent %} thread--{{ thread.accent }}{% endif %}">
       <h2 class="thread-title">{{ thread.title }}</h2>
       <p class="thread-summary">{{ thread.summary }}</p>
       {% if thread.diagram %}

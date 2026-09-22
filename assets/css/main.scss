@@ -840,3 +840,19 @@ a.media-title:hover { color: var(--accent); }
   color: var(--ink-faint);
   margin-bottom: var(--space-2xs);
 }
+
+/* A thread can carry its own accent so separate lines of work read as
+   separate. Overriding the token on the thread re-colours everything inside
+   it -- rule, diagram, highlight bars, links -- with no per-component rules.
+   Status badge colours are deliberately not included: published/in-review
+   must mean the same thing everywhere on the page. */
+.thread--violet {
+  --accent: #574BC4;
+  --accent-quiet: #ECEAFB;
+}
+@media (prefers-color-scheme: dark) {
+  .thread--violet {
+    --accent: #A79BFF;
+    --accent-quiet: #241F4A;
+  }
+}
