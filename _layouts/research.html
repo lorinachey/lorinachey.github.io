@@ -18,19 +18,11 @@ layout: default
 
 <section class="band band--flush">
   <p class="eyebrow">Talks</p>
-  <ul class="plain-list">
+  <div class="talk-list">
     {% for talk in site.data.talks %}
-      <li class="plain-item">
-        <h3>{{ talk.title }}</h3>
-        {% if talk.venue or talk.date %}
-          <p class="meta">{{ talk.venue }}{% if talk.venue and talk.date %} &middot; {% endif %}{{ talk.date }}</p>
-        {% endif %}
-        {% if talk.video %}
-          <ul class="pub-links"><li><a href="{{ talk.video }}" target="_blank" rel="noopener">Watch</a></li></ul>
-        {% endif %}
-      </li>
+      {% include talk.html talk=talk %}
     {% endfor %}
-  </ul>
+  </div>
 </section>
 
 <section class="band band--sunk band--flush">

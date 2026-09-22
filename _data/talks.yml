@@ -7,3 +7,7 @@
   venue:
   date:
   video: "https://www.youtube.com/watch?v=8uScOex5704"
+  # Thumbnail is self-hosted rather than hotlinked from img.youtube.com, so the
+  # page holds no third-party request and does not break if YouTube changes it.
+  image: talks/vla-talk-8uScOex5704.jpg
+  image_alt: "Title frame of the Vision-Language-Action models talk"

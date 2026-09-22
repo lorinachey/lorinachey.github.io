@@ -678,3 +678,49 @@ a.media-title:hover { color: var(--accent); }
 /* The resume leans on trailing-backslash line breaks for dates and skill
    groups; give those a touch more air. */
 .cv-body p { margin-bottom: var(--space-s); }
+
+/* ---------------------------------------------------------------- talks -- */
+
+.talk-list { display: grid; gap: var(--space-m); max-width: var(--page-max); margin-inline: auto; }
+
+.talk {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-m);
+  align-items: start;
+  padding: var(--space-m);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.talk:not(:has(.talk-poster)) { grid-template-columns: 1fr; }
+
+.talk-poster {
+  position: relative;
+  display: block;
+  border-radius: calc(var(--radius) - 2px);
+  overflow: hidden;
+  background: var(--surface-sunk);
+  aspect-ratio: 16 / 9;
+}
+.talk-poster img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Play badge, drawn over the poster. */
+.talk-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.15s ease;
+}
+.talk-play svg { width: 68px; height: 48px; }
+.talk-play-bg { fill: #212121; fill-opacity: 0.82; transition: fill 0.15s ease, fill-opacity 0.15s ease; }
+
+.talk-poster:hover .talk-play { background: rgba(0,0,0,0.12); }
+.talk-poster:hover .talk-play-bg { fill: #FF0000; fill-opacity: 1; }
+
+.talk-body h3 { margin: 0 0 var(--space-2xs); font-size: var(--step-1); }
+
+@media (max-width: 720px) {
+  .talk { grid-template-columns: 1fr; }
+}

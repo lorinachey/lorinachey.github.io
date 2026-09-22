@@ -1,0 +1,31 @@
+{%- comment -%}
+A talk, shown as a linked poster with a play badge. Deliberately not an
+embedded iframe: an embed pulls ~1MB and third-party cookies on page load.
+Clicking opens the video on YouTube. Zero JavaScript.
+{%- endcomment -%}
+{%- assign talk = include.talk -%}
+<article class="talk">
+  {% if talk.image and talk.video %}
+    <a class="talk-poster" href="{{ talk.video }}" target="_blank" rel="noopener"
+       aria-label="Watch: {{ talk.title }} (opens YouTube)">
+      <img src="{{ talk.image | prepend: '/assets/img/' | relative_url }}"
+           alt="{{ talk.image_alt | default: talk.title }}"
+           width="1280" height="720" loading="lazy">
+      <span class="talk-play" aria-hidden="true">
+        <svg viewBox="0 0 68 48" focusable="false">
+          <path class="talk-play-bg" d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.6a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.7a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z"/>
+          <path d="M45 24 27 14v20z" fill="#fff"/>
+        </svg>
+      </span>
+    </a>
+  {% endif %}
+  <div class="talk-body">
+    <h3>{{ talk.title }}</h3>
+    {% if talk.venue or talk.date %}
+      <p class="meta">{{ talk.venue }}{% if talk.venue and talk.date %} &middot; {% endif %}{{ talk.date }}</p>
+    {% endif %}
+    {% if talk.video %}
+      <ul class="pub-links"><li><a href="{{ talk.video }}" target="_blank" rel="noopener">Watch on YouTube</a></li></ul>
+    {% endif %}
+  </div>
+</article>
