@@ -1,12 +1,9 @@
 {%- comment -%}
-Click-to-play YouTube facade.
+Standalone click-to-play YouTube embed, in its own card.
 
 A plain iframe embed costs roughly 1MB and a set of third-party cookies on
 every page load, whether or not anyone watches. This shows a self-hosted
 poster and only loads the player on click, against youtube-nocookie.com.
-
-This is the one place the site ships JavaScript -- about 25 lines, inline, and
-the poster is a working link to YouTube if it never runs.
 
 Usage: {% include video-embed.html video=thread.video %}
 {%- endcomment -%}
@@ -18,17 +15,5 @@ Usage: {% include video-embed.html video=thread.video %}
       {{ v.caption }}
     </figcaption>
   {% endif %}
-  <a class="video-facade" href="https://www.youtube.com/watch?v={{ v.id }}"
-     target="_blank" rel="noopener"
-     aria-label="Play: {{ v.title | escape }}{% if v.duration %} ({{ v.duration }}){% endif %}">
-    <img src="{{ v.image | prepend: '/assets/img/' | relative_url }}"
-         alt="{{ v.image_alt | default: v.title | escape }}" loading="lazy">
-    <span class="talk-play" aria-hidden="true">
-      <svg viewBox="0 0 68 48" focusable="false">
-        <path class="talk-play-bg" d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.6a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.7a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z"/>
-        <path d="M45 24 27 14v20z" fill="#fff"/>
-      </svg>
-    </span>
-    {% if v.duration %}<span class="video-duration" aria-hidden="true">{{ v.duration }}</span>{% endif %}
-  </a>
+  {% include video-poster.html video=v %}
 </figure>

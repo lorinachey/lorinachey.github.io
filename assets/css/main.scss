@@ -878,3 +878,27 @@ html { scroll-behavior: smooth; }
 /* Keeps a jumped-to heading off the very top edge of the viewport. */
 .thread,
 .band[id] { scroll-margin-top: var(--space-l); }
+
+/* A project card carrying a video is far heavier than a text card, so it takes
+   its own full-width row rather than distorting the three-up grid. Poster sits
+   beside the text on wide screens and stacks on a phone. */
+.card--media {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  gap: var(--space-l);
+  align-items: start;
+}
+
+.card-body > h3 { margin-top: 0; }
+.card-body > p:last-of-type { margin-bottom: 0; }
+
+.card--media .video-facade,
+.card--media .video-frame {
+  max-width: none;
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .card--media { grid-template-columns: 1fr; }
+}
