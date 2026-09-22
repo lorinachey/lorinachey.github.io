@@ -5,6 +5,23 @@ layout: default
 <div class="page-content">
   <h1>{{ page.title }}</h1>
   <div class="lede">{{ content }}</div>
+
+  {%- comment -%}
+    Built from the threads data rather than hand-written, so adding or renaming
+    a thread updates these links automatically.
+  {%- endcomment -%}
+  <p class="page-jump">
+    Read more about my work on
+    {% for thread in site.data.research_threads -%}
+      {%- unless forloop.first -%}
+        {%- if forloop.last -%}
+          {%- if site.data.research_threads.size > 2 %}, and {% else %} and {% endif -%}
+        {%- else %}, {% endif -%}
+      {%- endunless -%}
+      <a href="#{{ thread.id }}">{{ thread.title | downcase }}</a>
+    {%- endfor -%}.
+    You can also see my <a href="#talks">talks</a> and <a href="#projects">projects</a>.
+  </p>
 </div>
 
 {%- comment -%}
@@ -16,7 +33,7 @@ publications.yml can never silently vanish from the page.
   <p class="eyebrow">Research threads</p>
   {% assign grouped = "" | split: "" %}
   {% for thread in site.data.research_threads %}
-    <div class="thread{% if thread.accent %} thread--{{ thread.accent }}{% endif %}">
+    <div class="thread{% if thread.accent %} thread--{{ thread.accent }}{% endif %}" id="{{ thread.id }}">
       <h2 class="thread-title">
         {{ thread.title }}
         {% if thread.status %}<span class="thread-status">{{ thread.status }}</span>{% endif %}
@@ -61,7 +78,7 @@ publications.yml can never silently vanish from the page.
   {% endif %}
 </section>
 
-<section class="band band--flush">
+<section class="band band--flush" id="talks">
   <p class="eyebrow">Talks</p>
   <div class="talk-list">
     {% for talk in site.data.talks %}
@@ -70,7 +87,7 @@ publications.yml can never silently vanish from the page.
   </div>
 </section>
 
-<section class="band band--sunk band--flush">
+<section class="band band--sunk band--flush" id="projects">
   <p class="eyebrow">Projects</p>
   <div class="cards">
     {% for proj in site.data.projects %}

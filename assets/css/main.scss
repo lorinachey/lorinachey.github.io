@@ -931,3 +931,21 @@ a.media-title:hover { color: var(--accent); }
   font-family: var(--font-mono);
   font-size: var(--step--1);
 }
+
+/* ------------------------------------------------------- in-page jumps -- */
+
+.page-jump {
+  max-width: var(--measure);
+  margin-top: var(--space-m);
+  color: var(--ink-muted);
+}
+.page-jump a { text-decoration-thickness: 1px; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Keeps a jumped-to heading off the very top edge of the viewport. */
+.thread,
+.band[id] { scroll-margin-top: var(--space-l); }
