@@ -814,3 +814,29 @@ a.media-title:hover { color: var(--accent); }
   color: var(--ink);
   font-size: var(--step--1);
 }
+
+/* A thread diagram sits between the thread summary and its papers, so it needs
+   to read as part of the thread rather than as a page-level banner. */
+.thread .explainer {
+  margin-bottom: var(--space-l);
+  padding: var(--space-l);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.explainer-caption {
+  max-width: var(--measure);
+  margin-bottom: var(--space-m);
+  color: var(--ink-muted);
+}
+
+.explainer-kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: var(--space-2xs);
+}
