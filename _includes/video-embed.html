@@ -13,8 +13,8 @@ Usage: {% include video-embed.html video=thread.video %}
 {%- assign v = include.video -%}
 <figure class="video-embed" data-video="{{ v.id }}">
   {% if v.caption %}
-    <figcaption class="explainer-caption">
-      <span class="explainer-kicker">Watch</span>
+    <figcaption class="media-caption">
+      <span class="media-kicker">Watch</span>
       {{ v.caption }}
     </figcaption>
   {% endif %}

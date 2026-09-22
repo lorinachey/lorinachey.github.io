@@ -23,8 +23,13 @@
     diffusion models to predict the geometry that has not been seen yet, fuses
     those predictions into a live occupancy map without ever overwriting
     observed space, and uses the result to keep exploring instead of pausing.
-  # Renders _includes/diagrams/<name>.html directly under this thread's summary.
-  diagram: occupancy
+  video:
+    id: dv0r7RibIPE
+    title: "Boston Dynamics Spot robot performing generative occupancy mapping in real time"
+    caption: "Generative occupancy mapping running live on a Spot robot."
+    image: talks/generative-occupancy-dv0r7RibIPE.jpg
+    image_alt: "A Boston Dynamics Spot robot mapping an indoor space, with the predicted occupancy map alongside"
+    duration: "2:41"
   publications: [scenesense, online-diffusion, robust-exploration]
 
 - id: multiagent
