@@ -17,8 +17,18 @@ publications.yml can never silently vanish from the page.
   {% assign grouped = "" | split: "" %}
   {% for thread in site.data.research_threads %}
     <div class="thread{% if thread.accent %} thread--{{ thread.accent }}{% endif %}">
-      <h2 class="thread-title">{{ thread.title }}</h2>
-      <p class="thread-summary">{{ thread.summary }}</p>
+      <h2 class="thread-title">
+        {{ thread.title }}
+        {% if thread.status %}<span class="thread-status">{{ thread.status }}</span>{% endif %}
+      </h2>
+      {% if thread.needs_copy %}
+        <p class="thread-todo" role="note">
+          Placeholder &mdash; this thread still needs a written summary. The
+          production build refuses to publish while this is here.
+        </p>
+      {% elsif thread.summary %}
+        <p class="thread-summary">{{ thread.summary }}</p>
+      {% endif %}
       {% if thread.diagram %}
         {% include diagrams/{{ thread.diagram }}.html %}
       {% endif %}
