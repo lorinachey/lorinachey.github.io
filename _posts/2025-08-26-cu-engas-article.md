@@ -3,7 +3,7 @@ layout: post
 title: "CU Boulder Spotlight Article"
 author: "Lorin Achey"
 categories: news
-image: cu-article-snippet.png
+image: cu-article-snippet.jpg
 thumb: thumbs/cu-article.jpg
 ---
 
