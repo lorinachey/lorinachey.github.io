@@ -7,9 +7,12 @@ on:
     branches: [gh-pages]
   workflow_dispatch:
 
-# Allow one concurrent deployment; don't cancel a run that is mid-deploy.
+# One run per branch at a time; don't cancel a run that is mid-deploy.
+# The group must include the ref: GitHub keeps only one *queued* run per
+# group, so with a single shared group a push to dev arriving while the
+# gh-pages deploy was still queued displaced that deploy (PR #12).
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
