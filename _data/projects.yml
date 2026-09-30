@@ -32,15 +32,13 @@
 
 - title: "Self-Driving Cars Specialization"
   summary: >-
-    I completed the University of Toronto's four-course Self-Driving Cars
-    Specialization on Coursera, which works through the full autonomy stack:
-    state estimation and localization by fusing GPS/INS, wheel odometry and
-    LiDAR; visual perception with object detection, depth estimation and
-    semantic segmentation; and hierarchical motion planning with behaviour
-    planning, path planning and vehicle control. The capstone drives a car
-    through the CARLA simulator, avoiding a parked vehicle, following a lead
-    car and handling an intersection. The video is my review of the
-    specialization and whether it is worth the time and money.
+    My review of the University of Toronto's four-course Self-Driving Cars
+    Specialization on Coursera, recorded after completing it. The courses
+    cover the autonomy stack end to end: state estimation and localization
+    from GPS/INS, wheel odometry and LiDAR; visual perception with object
+    detection, depth estimation and semantic segmentation; and hierarchical
+    motion planning with vehicle control, ending in a capstone that drives a
+    car through CARLA.
   video:
     id: idMxI-sKbD4
     title: "I Review Coursera's Self-Driving Cars Specialization and Coursera PLUS (Not Sponsored)"

@@ -909,6 +909,23 @@ html { scroll-behavior: smooth; }
   width: 100%;
 }
 
+/* The projects list mixes full-width video cards with small text cards. As a
+   flex row the text cards sit centred between the video rows instead of
+   hugging the left edge of a three-column grid. */
+.cards--projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards--projects > .card {
+  flex: 1 1 17rem;
+  max-width: 28rem;
+}
+.cards--projects > .card--media {
+  flex-basis: 100%;
+  max-width: none;
+}
+
 @media (max-width: 720px) {
   .card--media { grid-template-columns: 1fr; }
 }

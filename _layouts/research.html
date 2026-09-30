@@ -95,7 +95,7 @@ publications.yml can never silently vanish from the page.
 
 <section class="band band--sunk band--flush" id="projects">
   <p class="eyebrow">Projects</p>
-  <div class="cards">
+  <div class="cards cards--projects">
     {% for proj in site.data.projects %}
       <article class="card{% if proj.video %} card--media{% endif %}"
                {% if proj.video %}data-video="{{ proj.video.id }}"{% endif %}>
