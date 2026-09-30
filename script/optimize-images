@@ -1,0 +1,137 @@
+#!/usr/bin/env python3
+"""Downsize and strip metadata from the images the site serves.
+
+Three things happen to each image:
+
+  1. Resized to at most MAX_WIDTH. Source photos come straight off a phone at
+     4032px; the widest they are ever displayed is a ~720px column, so even at
+     2x device pixel ratio anything beyond ~1600px is bytes nobody sees.
+  2. EXIF stripped. Phone photos carry GPS coordinates, and several of these
+     were published with them intact. Orientation is applied to the pixels
+     first so the image still looks right without the tag.
+  3. Re-encoded. Photographic content goes to JPEG; flat graphics such as the
+     signal-integrity board diagrams stay PNG, where PNG genuinely wins.
+
+Re-runnable: already-optimised files are skipped, so this can be run again
+after adding an image.
+
+    python3 script/optimize-images          # report only
+    python3 script/optimize-images --write  # apply
+"""
+
+import sys
+import pathlib
+from PIL import Image, ImageOps
+
+MAX_WIDTH = 1600
+JPEG_QUALITY = 82
+SRC = pathlib.Path("assets/img")
+
+# Files whose extension changes are listed explicitly, because references to
+# them elsewhere in the repo have to change too. Everything else is optimised
+# in place, keeping its current format.
+CONVERT_TO_JPEG = {
+    "cu-article-snippet.png": "cu-article-snippet.jpg",
+    "scene-sense-diffusion-models.PNG": "scene-sense-diffusion-models.jpg",
+    "ndseg-fellowship.png": "ndseg-fellowship.jpg",
+}
+
+# Flat graphics: few colours, large areas of solid fill. PNG is the right
+# format and converting them would look worse at a similar size.
+KEEP_PNG = {"board1_TDR_simulation_in_ADS.PNG", "board1_z0_matching.PNG",
+            "board2_differential_pairs_tight_and_loose_coupling.PNG",
+            "board3_different_shaped_traces.PNG"}
+
+SKIP_DIRS = {"thumbs", "generated"}
+
+# Originals kept deliberately: a served, optimised derivative already exists,
+# so there is nothing to gain from touching the source.
+SKIP_FILES = {"spot-with-height-grid-on-terrain.png"}
+
+# Only rewrite when the saving is real. Without this, already-optimised JPEGs
+# get re-encoded for no gain (pure generation loss), and PNGs whose palette
+# Pillow cannot reproduce come out larger than they started.
+MIN_SAVING = 0.10
+
+
+def candidates():
+    for p in sorted(SRC.rglob("*")):
+        if p.is_dir() or p.suffix.lower() not in {".jpg", ".jpeg", ".png"}:
+            continue
+        if SKIP_DIRS & set(p.parts) or p.name in SKIP_FILES:
+            continue
+        yield p
+
+
+def optimise(p, write):
+    before = p.stat().st_size
+    im = Image.open(p)
+    orig_size = im.size
+
+    # Bake in orientation before the EXIF tag is discarded.
+    im = ImageOps.exif_transpose(im)
+
+    target = CONVERT_TO_JPEG.get(p.name)
+    keep_png = p.name in KEEP_PNG or (target is None and p.suffix.lower() == ".png")
+
+    if im.width > MAX_WIDTH:
+        im = im.resize((MAX_WIDTH, round(im.height * MAX_WIDTH / im.width)), Image.LANCZOS)
+
+    out = p.with_name(target) if target else p
+    if keep_png and not target:
+        params = dict(format="PNG", optimize=True)
+    else:
+        im = im.convert("RGB")
+        params = dict(format="JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
+
+    import io
+    buf = io.BytesIO(); im.save(buf, **params)
+    after = buf.tell()
+
+    # A format conversion is worth doing even for a small win, because it also
+    # fixes the content type. Otherwise require a real saving.
+    worth_it = target is not None or after < before * (1 - MIN_SAVING)
+    if not worth_it:
+        return before, before, orig_size, orig_size, None, False
+
+    if write:
+        out.write_bytes(buf.getvalue())  # no exif= anywhere: metadata is dropped
+        after = out.stat().st_size
+        if out != p:
+            p.unlink()
+
+    return before, after, orig_size, im.size, (out.name if out != p else None), True
+
+
+def main():
+    write = "--write" in sys.argv
+    total_before = total_after = 0
+    renames = []
+    print(f"{'file':52} {'before':>9} {'after':>9} {'saved':>7}  resize")
+    print("-" * 96)
+    for p in candidates():
+        before, after, osz, nsz, renamed, changed = optimise(p, write)
+        total_before += before; total_after += after
+        if not changed:
+            print(f"{p.name[:52]:52} {before//1024:>8}K {'':>9} {'skip':>6}   already optimal")
+            continue
+        if renamed:
+            renames.append((p.name, renamed))
+        pct = 100 - round(after * 100 / before) if before else 0
+        resize = f"{osz[0]}x{osz[1]} -> {nsz[0]}x{nsz[1]}" if osz != nsz else "-"
+        mark = f" -> {renamed}" if renamed else ""
+        print(f"{(p.name + mark)[:52]:52} {before//1024:>8}K {after//1024:>8}K {pct:>6}%  {resize}")
+
+    print("-" * 96)
+    print(f"{'TOTAL':52} {total_before//1024:>8}K {total_after//1024:>8}K "
+          f"{100 - round(total_after*100/total_before):>6}%")
+    if renames:
+        print("\nRenamed — update references to these:")
+        for a, b in renames:
+            print(f"  {a} -> {b}")
+    if not write:
+        print("\n(dry run; pass --write to apply)")
+
+
+if __name__ == "__main__":
+    main()

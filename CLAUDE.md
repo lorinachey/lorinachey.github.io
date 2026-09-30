@@ -111,6 +111,8 @@ assets/js/            theme-toggle.js (every page), video-facade.js (opt-in)
 assets/img/           Images; thumbs/ generated; assets/pdf/ for papers
 script/check-ready    Publish gate, run by CI on the deploy path only
 script/make-thumbs    Regenerates news thumbnails from post images
+script/optimize-images  Downsizes to 1600px, strips EXIF, re-encodes. Run
+                      after adding a photo; dry-run by default, --write applies
 ```
 
 `README.md` documents the repo for a human visitor; `LICENSE.md` splits terms —
@@ -144,6 +146,10 @@ filename. Changing `categories:` is safe.
 Actions build.
 
 **Every image needs `alt`.** htmlproofer enforces this.
+
+**Run `script/optimize-images` after adding a photo.** Phone photos arrive at
+4032px and carry EXIF GPS; the script downsizes, strips metadata and re-encodes.
+It only rewrites a file when the saving is real, so it is safe to re-run.
 
 **Placeholder copy must not ship.** `needs_copy: true` in a data file renders a
 visible placeholder and makes `script/check-ready` fail on the deploy path.

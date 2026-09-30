@@ -44,7 +44,7 @@
   status: published
   selected: true
   theme: occupancy
-  image: scene-sense-diffusion-models.PNG
+  image: scene-sense-diffusion-models.jpg
   image_alt: "Diffusion pipeline predicting 3D occupancy at the exploration frontier"
   links:
     - {type: "IEEE Xplore", url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11128832"}

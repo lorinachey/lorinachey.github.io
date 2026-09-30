@@ -4,7 +4,7 @@ title: "Can Generative AI deliver for Robotics?"
 author: "Lorin Achey"
 categories: news
 tags: [gen-ai]
-image: scene-sense-diffusion-models.PNG
+image: scene-sense-diffusion-models.jpg
 thumb: thumbs/scenesense.jpg
 ---
 

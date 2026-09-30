@@ -29,3 +29,21 @@
     large-model design.
   links:
     - {type: "GitHub", url: "https://github.com/lorinachey/vision-language-models/blob/main/paligemma-from-scratch.ipynb"}
+
+- title: "Self-Driving Cars Specialization"
+  summary: >-
+    My review of the University of Toronto's four-course Self-Driving Cars
+    Specialization on Coursera, recorded after completing it. The courses
+    cover the autonomy stack end to end: state estimation and localization
+    from GPS/INS, wheel odometry and LiDAR; visual perception with object
+    detection, depth estimation and semantic segmentation; and hierarchical
+    motion planning with vehicle control, ending in a capstone that drives a
+    car through CARLA.
+  video:
+    id: idMxI-sKbD4
+    title: "I Review Coursera's Self-Driving Cars Specialization and Coursera PLUS (Not Sponsored)"
+    image: talks/self-driving-cars-idMxI-sKbD4.jpg
+    image_alt: "Title frame of the Self-Driving Cars Specialization review video"
+    duration: "17:55"
+  links:
+    - {type: "Watch", url: "https://www.youtube.com/watch?v=idMxI-sKbD4"}
