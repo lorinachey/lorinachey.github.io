@@ -19,6 +19,16 @@
   summary: >-
     A simulation-to-simulation transfer pipeline for validating control policies
     across physics engines, comparing IsaacSim with MuJoCo.
+  # A self-hosted silent loop rather than a YouTube embed: 42 s, ~1 MB, cropped
+  # to the two simulator viewports. The ProRes master it was cut from lives in
+  # assets/video/ but is gitignored and excluded from the build.
+  clip:
+    src: video/sim2sim-isaacsim-mujoco.mp4
+    poster: projects/sim2sim-isaacsim-mujoco-poster.jpg
+    width: 960
+    height: 350
+    label: "A quadruped robot walking with the same locomotion policy in Isaac Sim and in MuJoCo, side by side"
+    caption: "The same locomotion policy running in Isaac Sim (left) and MuJoCo (right)."
   links:
     - {type: "Write-up (PDF)", url: "/assets/pdf/Sim2SimTransferQuadrupedRobots-1.pdf", local: true}
 
