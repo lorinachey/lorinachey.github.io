@@ -21,7 +21,7 @@
     across physics engines, comparing IsaacSim with MuJoCo.
   # A self-hosted silent loop rather than a YouTube embed: 42 s, ~1 MB, cropped
   # to the two simulator viewports. The ProRes master it was cut from lives in
-  # assets/video/ but is gitignored and excluded from the build.
+  # assets/video/masters/, which is gitignored and excluded from the build.
   clip:
     src: video/sim2sim-isaacsim-mujoco.mp4
     poster: projects/sim2sim-isaacsim-mujoco-poster.jpg

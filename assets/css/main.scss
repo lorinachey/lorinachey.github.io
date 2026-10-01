@@ -990,6 +990,7 @@ html { scroll-behavior: smooth; }
   border-radius: calc(var(--radius) - 2px);
   background: var(--surface-sunk);
 }
+.thread-figure .video-clip-media { max-width: 720px; }
 
 .thread-figure .media-caption {
   margin: var(--space-s) 0 0;

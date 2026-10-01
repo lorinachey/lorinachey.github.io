@@ -27,7 +27,7 @@ exclude:
   - node_modules/
   - README.md
   - LICENSE.md
-  - assets/video/*.mov
+  - assets/video/masters/
   - CLAUDE.md
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
