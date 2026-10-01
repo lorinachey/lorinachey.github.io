@@ -997,6 +997,24 @@ html { scroll-behavior: smooth; }
   font-size: var(--step--1);
 }
 
+/* A clip and a still shown as a pair: two equal columns on wide screens,
+   stacked on a phone. Inside the pair the column does the size-limiting,
+   so the 720px cap on a lone figure is lifted. */
+.thread-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-m);
+  align-items: start;
+  margin-bottom: var(--space-l);
+}
+.thread-media > .thread-figure { margin-bottom: 0; }
+.thread-media .thread-figure img,
+.thread-media .thread-figure .video-clip-media { max-width: none; }
+
+@media (max-width: 720px) {
+  .thread-media { grid-template-columns: 1fr; }
+}
+
 /* ================================================================= THEME == */
 
 /*
