@@ -5,3 +5,5 @@ _site
 .DS_Store
 .jekyll-cache
 *.gem
+# Video masters stay on disk; only the compressed web encodes are committed.
+assets/video/masters/

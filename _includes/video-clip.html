@@ -1,0 +1,24 @@
+{%- comment -%}
+A short self-hosted clip that plays silently in a loop, where a GIF would
+once have gone. Progressive enhancement: without JavaScript it is a poster
+with native controls; with video-clip.js it starts when scrolled into view,
+unless the visitor prefers reduced motion, in which case it stays a still.
+
+The clip is sized by its own width/height so a wide side-by-side recording
+is not forced into the 16:9 poster slot the YouTube cards use.
+
+Usage: {% include video-clip.html clip=proj.clip %}
+{%- endcomment -%}
+{%- assign c = include.clip -%}
+<figure class="video-clip">
+  <video class="video-clip-media" data-clip
+         muted loop playsinline controls preload="metadata"
+         width="{{ c.width }}" height="{{ c.height }}"
+         poster="{{ c.poster | prepend: '/assets/img/' | relative_url }}"
+         aria-label="{{ c.label | escape }}">
+    <source src="{{ c.src | prepend: '/assets/' | relative_url }}" type="video/mp4">
+  </video>
+  {% if c.caption %}
+    <figcaption class="media-caption">{{ c.caption }}</figcaption>
+  {% endif %}
+</figure>

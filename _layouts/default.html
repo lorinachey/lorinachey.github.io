@@ -12,5 +12,8 @@
     {% if page.has_video %}
       <script src="{{ '/assets/js/video-facade.js' | relative_url }}" defer></script>
     {% endif %}
+    {% if page.has_clip %}
+      <script src="{{ '/assets/js/video-clip.js' | relative_url }}" defer></script>
+    {% endif %}
   </body>
 </html>
