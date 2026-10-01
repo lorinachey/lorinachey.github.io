@@ -1008,8 +1008,16 @@ html { scroll-behavior: smooth; }
   margin-bottom: var(--space-l);
 }
 .thread-media > .thread-figure { margin-bottom: 0; }
+/* Both halves share the clip's 16:9 frame so the pair sits level. A still
+   with a different ratio is cropped to fit, centred, by CSS alone; the
+   image file itself is untouched and shows in full anywhere else. */
 .thread-media .thread-figure img,
-.thread-media .thread-figure .video-clip-media { max-width: none; }
+.thread-media .thread-figure .video-clip-media {
+  max-width: none;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+}
 
 @media (max-width: 720px) {
   .thread-media { grid-template-columns: 1fr; }
