@@ -46,6 +46,11 @@ publications.yml can never silently vanish from the page.
       {% elsif thread.summary %}
         <p class="thread-summary">{{ thread.summary }}</p>
       {% endif %}
+      {% if thread.clip %}
+        <div class="thread-figure">
+          {% include video-clip.html clip=thread.clip %}
+        </div>
+      {% endif %}
       {% if thread.image %}
         <figure class="thread-figure">
           <img src="{{ thread.image | prepend: '/assets/img/' | relative_url }}"

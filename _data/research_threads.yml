@@ -8,6 +8,18 @@
   title: "Risk-sensitive locomotion and navigation"
   accent: green
   status: "In preparation"
+  # Self-hosted silent loop, cut from the master in assets/video/masters/.
+  # The caption states only what is on screen; the policy itself is not yet
+  # published, so no claims about it here.
+  clip:
+    src: video/spot-curriculum-isaaclab.mp4
+    poster: risk-RL-work/spot-curriculum-isaaclab-poster.jpg
+    width: 960
+    height: 540
+    label: "A Spot quadruped walking over stair pyramids and rough terrain in simulation"
+    caption: >-
+      Spot training in Isaac Lab, progressing through a terrain curriculum
+      from stair pyramids to rough ground.
   image: risk-RL-work/spot-height-grid.jpg
   image_alt: >-
     A quadruped robot standing on simulated rough terrain, surrounded by a grid
