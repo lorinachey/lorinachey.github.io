@@ -845,6 +845,11 @@ a.media-title:hover { color: var(--accent); }
   --accent-quiet: #E6F4EA;
 }
 
+.thread--rose {
+  --accent: #A63D5C;
+  --accent-quiet: #F8E8EE;
+}
+
 .thread-status {
   display: inline-block;
   margin-left: var(--space-xs);
@@ -1067,17 +1072,24 @@ html { scroll-behavior: smooth; }
   --accent-quiet: #14301E;
 }
 
+@mixin thread-rose-dark {
+  --accent: #F09AB4;
+  --accent-quiet: #3A1C27;
+}
+
 /* 1. Follow the OS, unless the visitor has explicitly chosen light. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"])                 { @include theme-dark; }
   :root:not([data-theme="light"]) .thread--violet { @include thread-violet-dark; }
   :root:not([data-theme="light"]) .thread--green  { @include thread-green-dark; }
+  :root:not([data-theme="light"]) .thread--rose   { @include thread-rose-dark; }
 }
 
 /* 2. An explicit dark choice wins on any OS. */
 :root[data-theme="dark"]                 { @include theme-dark; }
 :root[data-theme="dark"] .thread--violet { @include thread-violet-dark; }
 :root[data-theme="dark"] .thread--green  { @include thread-green-dark; }
+:root[data-theme="dark"] .thread--rose   { @include thread-rose-dark; }
 
 /* --------------------------------------------------------- theme toggle -- */
 
