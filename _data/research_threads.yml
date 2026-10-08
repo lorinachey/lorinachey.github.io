@@ -34,6 +34,30 @@
     risk directly.
   publications: []
 
+- id: embodied
+  title: "Embodied scene understanding"
+  # Rose accent: maps to .thread--rose in main.scss (light + both dark paths).
+  accent: rose
+  # Title card from the ECHO submission video (master in assets/video/masters/).
+  # Replace with a `video:` block once the full narrated video is on YouTube.
+  image: echo/echo-title-card.jpg
+  # No quotation marks here: the layout drops image_alt into the alt attribute
+  # unescaped, so a double quote would truncate it.
+  image_alt: >-
+    Title card reading ECHO: Embodied Camera Observations of Human Object
+    Carrying, over a panoramic view of a bright living room
+  summary: >-
+    A robot tidying a home has to answer a question that object recognition
+    alone cannot: where does this object belong? A book could reasonably go
+    on a shelf, a desk, or a nightstand, and what breaks the tie is the
+    inhabitant's routine, which is almost never stated outright. ECHO is a
+    large synthetic dataset for studying this. It pairs dense RGB-D scans of
+    indoor scenes with recordings of an embodied human carrying everyday
+    objects to where they belong, plus a one-sentence description of the
+    routine that implies the destination, and poses contextual object
+    placement as a benchmark task.
+  publications: [echo]
+
 - id: occupancy
   title: "Generative occupancy for exploration"
   summary: >-

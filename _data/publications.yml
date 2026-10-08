@@ -7,6 +7,21 @@
 # status: published | accepted | in-review | preprint   (drives the badge colour)
 # selected: true     surfaces the entry on the home page
 
+# Authors taken from arXiv 2610.10438v1 on 2026-10-08. Not yet listed on Google
+# Scholar at that date, so it could not be cross-checked there like the others.
+- id: echo
+  highlight: "3,805 human-annotated object-carrying episodes across 159 floors of 115 HM3D scenes. No single input modality is enough to predict where an object belongs."
+  title: "ECHO: Embodied Camera Observations of Human Object Carrying"
+  authors: ["Xuefei Sun", "Lorin Achey", "Kali Hamilton", "Alberto Speranzon", "Gregory Grebe", "Yonatan Bisk", "Christoffer Heckman"]
+  venue: "In review"
+  venue_full: "In review"
+  year: 2026
+  status: in-review
+  selected: true
+  theme: embodied
+  links:
+    - {type: "arXiv", url: "https://arxiv.org/abs/2610.10438"}
+
 - id: rf-multiagent
   highlight: "Across 480+ simulated cave environments, cut distance travelled by up to 58% and exploration time by up to 52%."
   title: "RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration"
