@@ -980,6 +980,43 @@ html { scroll-behavior: smooth; }
 .availability li { margin-bottom: var(--space-2xs); }
 .availability > p:last-child { margin-bottom: 0; font-size: var(--step--1); }
 
+/* One panel per thread. The summary, media and papers all sit inside a single
+   surface under the title rule, so a paper reads as part of the thread rather
+   than as a sibling card beside the figure. Media loses its own card inside
+   the panel, and papers become rows separated by rules instead of cards. */
+.thread-body {
+  margin-top: var(--space-m);
+  padding: var(--space-l);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.thread-body > :last-child { margin-bottom: 0; }
+
+.thread-body .thread-figure,
+.thread-body .video-embed {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.thread-papers-label {
+  margin: var(--space-l) 0 0;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--rule);
+}
+
+.thread-body .pub-list { display: block; }
+.thread-body .pub {
+  padding: var(--space-m) 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+}
+.thread-body .pub:last-child { border-bottom: 0; padding-bottom: 0; }
+
 /* A still image standing in for a thread's visual, matching the video card. */
 .thread-figure {
   margin: 0 0 var(--space-l);
