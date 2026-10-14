@@ -5,7 +5,7 @@ permalink: /about
 image: rmnp-hike-portrait.jpg
 ---
 
-I am a PhD student and 2025 NDSEG Fellowship recipient at the University of Colorado Boulder, co-advised by Dr. Bradley Hayes of the [Collaborative Artificial Intelligence and Robotics Laboratory](https://www.cairo-lab.com/) and Dr. Christoffer Heckman of the [Autonomous Robotics and Perception Group](https://arpg.github.io/). I work on multi-modal perception challenges for autonomous vehicles and mobile robots, with an emphasis on AI and machine learning that is robust, explainable, and safe.
+I am a PhD student and 2025 NDSEG Fellowship recipient at the University of Colorado Boulder, co-advised by Dr. Bradley Hayes of the [Collaborative Artificial Intelligence and Robotics Laboratory](https://www.cairo-lab.com/) and Dr. Christoffer Heckman of the [Autonomous Robotics and Perception Group](https://arpg.github.io/). My research centers on perception and sensor fusion for autonomous systems, risk-sensitive locomotion and navigation in unstructured environments, embodied AI for assistive robots, and collaborative multi-agent systems.
 
 <div class="availability" markdown="1">
 
