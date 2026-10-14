@@ -6,5 +6,6 @@ has_video: true
 has_clip: true
 ---
 
-I work on multi-modal perception challenges for autonomous vehicles and mobile
-robots.
+My research centers on perception and sensor fusion for autonomous systems,
+risk-sensitive locomotion and navigation in unstructured environments, embodied
+AI for assistive robots, and collaborative multi-agent systems.
