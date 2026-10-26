@@ -99,12 +99,12 @@ _data/
   talks.yml           Talks
   projects.yml        Technical projects
   media.yml           Press and media coverage
-_layouts/             default, home, page, post, cv, news, research
+_layouts/             default, home, page, post, cv, news, research, projects
 _includes/            head, header, footer, social-links, icon, icons/*.svg,
                       publication, talk, video-embed, video-poster,
                       post-list, media-list, post-date
 _posts/               Posts, YYYY-MM-DD-slug.md
-pages/                about, research, resume, news, contact
+pages/                about, research, projects, resume, news, contact
 index.html            Home page (layout: home)
 assets/css/main.scss  The entire stylesheet. No partials.
 assets/js/            theme-toggle.js (every page), video-facade.js (opt-in)
