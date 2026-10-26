@@ -1,5 +1,6 @@
 menu:
 - {name: 'Research',  url: 'research'}
+- {name: 'Projects',  url: 'projects'}
 - {name: 'CV',        url: 'resume'}
 - {name: 'News',      url: 'news'}
 - {name: 'About',     url: 'about'}
