@@ -13,7 +13,7 @@ plugins:             [jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jekyll-redire
 url:                 "https://lorinachey.github.io"
 baseurl:             ""
 title:		           "Lorin Achey"
-description:	       "Personal Website"
+description:	       "PhD student at CU Boulder researching competence and risk awareness in autonomous systems"
 author:              "Lorin Achey"
 
 # NOTE: setting `exclude` REPLACES Jekyll's default exclude list rather than

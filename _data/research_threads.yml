@@ -1,11 +1,19 @@
 # Research threads. Papers are grouped and ordered oldest-first within a thread
 # so the page reads as a progression rather than a list.
 #
-# Summaries are paraphrased from the papers' own abstracts -- no claims here
-# that Lorin has not already published. Worth her review all the same.
+# tier: main        the thesis. Rendered first, under "Thesis research".
+# tier: secondary   other lines of work, rendered smaller under "Secondary
+#                   research interests". A thread with no tier is not shown
+#                   (its papers would still appear under "Other work").
+#
+# Summaries are paraphrased from the papers' own abstracts, or for the thesis
+# thread from Lorin's own statement of it -- no claims here that Lorin has not
+# already made.
 
+# id stays `risk` so existing /research#risk links keep working.
 - id: risk
-  title: "Risk-sensitive locomotion and navigation"
+  tier: main
+  title: "Competence and risk awareness"
   accent: green
   status: "In preparation"
   # Self-hosted silent loop, cut from the master in assets/video/masters/.
@@ -28,13 +36,43 @@
     A quadruped sampling terrain around it in simulation while training with
     distributional reinforcement learning.
   summary: >-
-    This work uses distributional reinforcement learning, which models the whole
-    distribution of outcomes rather than just the expected return, to learn
-    navigation and locomotion policies for quadruped agents that account for
-    risk directly.
+    Autonomous agents, whether robots or AI agents, should know what they are
+    competent to do and should take risk tolerance as an explicit input. Both
+    should still hold once the system
+    leaves the conditions it was calibrated in: when it is compressed,
+    physically embodied, degraded, or handed to a new user. My thesis work
+    characterizes where competence and risk guarantees break between
+    calibration and deployment, and develops agents whose risk behaviour stays
+    calibrated under those conditions. One part of this uses distributional
+    reinforcement learning, which models the whole distribution of outcomes
+    rather than just the expected return, to learn locomotion and navigation
+    policies for quadruped agents that account for risk directly.
+  # Upcoming work on compression and AI agents. Lorin is sending the details;
+  # until then this renders a visible placeholder and blocks publishing.
+  upcoming:
+    needs_copy: true
   publications: []
 
+- id: occupancy
+  tier: secondary
+  title: "Generative occupancy for exploration"
+  summary: >-
+    Robots normally plan only over geometry they have directly measured, so
+    they stall when they turn a corner or enter a new room. This thread trains
+    diffusion models to predict the geometry that has not been seen yet, fuses
+    those predictions into a live occupancy map without ever overwriting
+    observed space, and uses the result to keep exploring instead of pausing.
+  video:
+    id: dv0r7RibIPE
+    title: "Boston Dynamics Spot robot performing generative occupancy mapping in real time"
+    caption: "Generative occupancy mapping running live on a Spot robot."
+    image: talks/generative-occupancy-dv0r7RibIPE.jpg
+    image_alt: "A Boston Dynamics Spot robot mapping an indoor space, with the predicted occupancy map alongside"
+    duration: "2:41"
+  publications: [scenesense, online-diffusion, robust-exploration]
+
 - id: embodied
+  tier: secondary
   title: "Embodied scene understanding"
   # Rose accent: maps to .thread--rose in main.scss (light + both dark paths).
   accent: rose
@@ -58,24 +96,8 @@
     placement as a benchmark task.
   publications: [echo]
 
-- id: occupancy
-  title: "Generative occupancy for exploration"
-  summary: >-
-    Robots normally plan only over geometry they have directly measured, so
-    they stall when they turn a corner or enter a new room. This thread trains
-    diffusion models to predict the geometry that has not been seen yet, fuses
-    those predictions into a live occupancy map without ever overwriting
-    observed space, and uses the result to keep exploring instead of pausing.
-  video:
-    id: dv0r7RibIPE
-    title: "Boston Dynamics Spot robot performing generative occupancy mapping in real time"
-    caption: "Generative occupancy mapping running live on a Spot robot."
-    image: talks/generative-occupancy-dv0r7RibIPE.jpg
-    image_alt: "A Boston Dynamics Spot robot mapping an indoor space, with the predicted occupancy map alongside"
-    duration: "2:41"
-  publications: [scenesense, online-diffusion, robust-exploration]
-
 - id: multiagent
+  tier: secondary
   title: "Multi-agent coordination under communication constraints"
   # `accent` scopes a different colour to this thread so it reads as a separate
   # line of work. Maps to a .thread--<name> class in main.scss.

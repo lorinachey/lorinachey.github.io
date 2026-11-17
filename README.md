@@ -1,8 +1,8 @@
 # lorinachey.github.io
 
 Personal academic website for **Lorin Achey**, a PhD student in computer
-science and robotics at CU Boulder, working on multi-modal perception for
-autonomous vehicles and mobile robots.
+science and robotics at CU Boulder, working on competence and risk awareness
+in autonomous systems.
 
 **Live at <https://lorinachey.github.io>**
 
