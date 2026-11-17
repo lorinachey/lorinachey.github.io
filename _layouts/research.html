@@ -10,12 +10,18 @@ layout: default
     Built from the threads data rather than hand-written, so adding or renaming
     a thread updates these links automatically.
   {%- endcomment -%}
+  {%- assign main_threads = site.data.research_threads | where: "tier", "main" -%}
+  {%- assign secondary_threads = site.data.research_threads | where: "tier", "secondary" -%}
   <p class="page-jump">
-    Read more about my work on
-    {% for thread in site.data.research_threads -%}
+    Read more about my thesis work on
+    {% for thread in main_threads -%}
+      {%- unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless -%}
+      <a href="#{{ thread.id }}">{{ thread.title | downcase }}</a>
+    {%- endfor -%}, and my secondary work on
+    {% for thread in secondary_threads -%}
       {%- unless forloop.first -%}
         {%- if forloop.last -%}
-          {%- if site.data.research_threads.size > 2 %}, and {% else %} and {% endif -%}
+          {%- if secondary_threads.size > 2 %}, and {% else %} and {% endif -%}
         {%- else %}, {% endif -%}
       {%- endunless -%}
       <a href="#{{ thread.id }}">{{ thread.title | downcase }}</a>
@@ -31,10 +37,23 @@ not listed in a thread still appears, under "Other work", so a new entry in
 publications.yml can never silently vanish from the page.
 {%- endcomment -%}
 <section class="band band--sunk band--flush">
-  <p class="eyebrow">Research threads</p>
   {% assign grouped = "" | split: "" %}
-  {% for thread in site.data.research_threads %}
-    <div class="thread{% if thread.accent %} thread--{{ thread.accent }}{% endif %}" id="{{ thread.id }}">
+  {%- comment -%}
+    One pass per tier: the thesis first, then secondary interests, which render
+    with smaller titles so the page reads as one main line of work plus others.
+    `grouped` accumulates across both passes for the "Other work" check below.
+  {%- endcomment -%}
+  {% assign tiers = "main,secondary" | split: "," %}
+  {% for tier in tiers %}
+  {% if tier == "main" %}
+    <p class="eyebrow">Thesis research</p>
+    {% assign tier_threads = main_threads %}
+  {% else %}
+    <p class="eyebrow tier-label">Secondary research interests</p>
+    {% assign tier_threads = secondary_threads %}
+  {% endif %}
+  {% for thread in tier_threads %}
+    <div class="thread thread--{{ tier }}{% if thread.accent %} thread--{{ thread.accent }}{% endif %}" id="{{ thread.id }}">
       <h2 class="thread-title">
         {{ thread.title }}
         {% if thread.status %}<span class="thread-status">{{ thread.status }}</span>{% endif %}
@@ -51,6 +70,13 @@ publications.yml can never silently vanish from the page.
         </p>
       {% elsif thread.summary %}
         <p class="thread-summary">{{ thread.summary }}</p>
+      {% endif %}
+      {% if thread.upcoming.needs_copy %}
+        <p class="thread-todo" role="note">
+          Placeholder &mdash; upcoming work for this thread still needs to be
+          written up. The production build refuses to publish while this is
+          here.
+        </p>
       {% endif %}
       {%- comment -%}
         A thread with both a clip and a still shows them as a side-by-side
@@ -90,6 +116,7 @@ publications.yml can never silently vanish from the page.
       {% endif %}
       </div>
     </div>
+  {% endfor %}
   {% endfor %}
 
   {% assign ungrouped = "" | split: "" %}

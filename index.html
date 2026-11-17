@@ -17,54 +17,55 @@ title: Home
     <p class="hero-eyebrow">PhD Student &middot; CU Boulder</p>
     <h1 class="hero-name">Lorin Achey</h1>
     <p class="hero-lede">
-      I build multi-modal perception for autonomous systems &mdash;
-      teaching machines to see, predict, and act in environments they have only
-      partly observed.
+      I build autonomous agents that know what they can do and take risk
+      tolerance as an input, and I study where those guarantees break between
+      calibration and deployment.
     </p>
     <div class="hero-actions">
-      <a class="btn btn--primary" href="{{ '/research' | relative_url }}">See the research</a>
-      <a class="btn" href="{{ '/resume' | relative_url }}">CV</a>
+      <a class="btn btn--primary" href="{% link pages/research.md %}">See the research</a>
+      <a class="btn" href="{% link pages/resume.md %}">CV</a>
     </div>
     {% include social-links.html labels=true class="social-links--hero" %}
   </div>
 </section>
 
 <section class="band">
-  <p class="eyebrow">Research directions</p>
+  <p class="eyebrow">Thesis research</p>
+  <article class="card card--thesis thread--green">
+    <h3>Competence and risk awareness</h3>
+    <p>Robots and AI agents should know what they are competent to do and take
+       risk tolerance as an explicit input, and both should still hold when the
+       system is compressed, physically embodied, degraded, or handed to a new
+       user. I study where those guarantees break between calibration and
+       deployment, and build agents whose risk behaviour stays calibrated.
+       One part of this uses distributional reinforcement learning to learn
+       quadruped locomotion and navigation policies that account for risk
+       directly.</p>
+    <a class="card-more" href="{% link pages/research.md %}#risk">Read more &rarr;</a>
+  </article>
+
+  <p class="eyebrow cards-label">Secondary research interests</p>
   <div class="cards">
     <article class="card">
-      <h3>Generative occupancy &amp; world models</h3>
+      <h3>Generative occupancy for exploration</h3>
       <p>Diffusion models that complete a 3D scene from partial observation, so a
          robot can plan against what is probably there rather than only what it
          has already seen.</p>
-      <a class="card-more" href="{{ '/research' | relative_url }}#occupancy">Read more &rarr;</a>
+      <a class="card-more" href="{% link pages/research.md %}#occupancy">Read more &rarr;</a>
     </article>
     <article class="card">
       <h3>Embodied scene understanding</h3>
       <p>Predicting where a carried object belongs in a home from the room layout,
          the person carrying it, and what little is known of their routine, so a
          robot can tidy or assist without being told where things go.</p>
-      <a class="card-more" href="{{ '/research' | relative_url }}#embodied">Read more &rarr;</a>
+      <a class="card-more" href="{% link pages/research.md %}#embodied">Read more &rarr;</a>
     </article>
     <article class="card">
-      <h3>Multi-modal 3D perception</h3>
-      <p>Fusing RGB-D, LiDAR, and RF signals into scene understanding that holds
-         up in the cluttered, egocentric, partly-observed conditions real robots
-         actually operate in.</p>
-    </article>
-    <article class="card">
-      <h3>Vision–Language–Action models</h3>
-      <p>Unifying perception, language, and control so that grounded instructions
-         become safe, explainable decisions on a real platform.</p>
-      {% comment %} Same video as the VLA entry in _data/talks.yml. {% endcomment %}
-      <a class="card-more" href="https://www.youtube.com/watch?v=8uScOex5704">Watch the talk &rarr;</a>
-    </article>
-    <article class="card">
-      <h3>Risk-sensitive locomotion &amp; navigation</h3>
-      <p>Distributional reinforcement learning models the whole spread of outcomes
-         rather than the expected return, so a quadruped can learn locomotion and
-         navigation policies that account for risk directly.</p>
-      <a class="card-more" href="{{ '/research' | relative_url }}#risk">Read more &rarr;</a>
+      <h3>Multi-agent coordination</h3>
+      <p>Planning where and when a team of robots should transmit when the radio
+         does not reach, so agents share what they have found without
+         backtracking to meet.</p>
+      <a class="card-more" href="{% link pages/research.md %}#multiagent">Read more &rarr;</a>
     </article>
   </div>
 </section>
@@ -72,7 +73,7 @@ title: Home
 <section class="band band--sunk">
   <div class="band-head">
     <p class="eyebrow">Selected publications</p>
-    <a class="band-more" href="{{ '/research' | relative_url }}">All publications &rarr;</a>
+    <a class="band-more" href="{% link pages/research.md %}">All publications &rarr;</a>
   </div>
   <div class="pub-list">
     {% for pub in site.data.publications %}
@@ -84,7 +85,7 @@ title: Home
 <section class="band">
   <div class="band-head">
     <p class="eyebrow">Recent news</p>
-    <a class="band-more" href="{{ '/facts' | relative_url }}">All news &rarr;</a>
+    <a class="band-more" href="{% link pages/news.md %}">All news &rarr;</a>
   </div>
   {% assign recent = site.posts | slice: 0, 3 %}
   {% include post-list.html posts=recent %}

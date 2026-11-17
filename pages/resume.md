@@ -43,7 +43,7 @@ May 2020 | Highest Honors
 ## Work Experience
 ### Graduate Student Researcher, University of Colorado Boulder, Boulder, CO.
 2024 – Present
-* Researching perception and generative world models for autonomous vehicles and mobile robots with the [Collaborative AI and Robotics Lab](https://www.cairo-lab.com/) and the [Autonomous Robotics and Perception Group](https://arpg.github.io/)
+* Researching competence and risk awareness for autonomous systems, robots and AI agents, with the [Collaborative AI and Robotics Lab](https://www.cairo-lab.com/) and the [Autonomous Robotics and Perception Group](https://arpg.github.io/)
 * See the [Research]({% link pages/research.md %}) page for publications
 
 ### Software Engineer II, AWS Ground Station - Amazon, Denver, CO.
